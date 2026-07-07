@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 70px);
-  padding: 24px;
+  padding: 25px;
+
 }
 
 .login-card {
@@ -211,7 +212,7 @@
   text-align: left;
 }
 
-.admin-table th, 
+.admin-table th,
 .admin-table td {
   padding: 16px;
   border-bottom: 1px solid var(--color-secondary-dark);
@@ -304,13 +305,16 @@
     align-items: stretch;
     text-align: center;
   }
+
   .export-actions {
     display: flex;
     justify-content: center;
   }
+
   .tab-content {
     padding: 20px 15px;
   }
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 10px;
