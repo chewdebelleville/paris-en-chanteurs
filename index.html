@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris en chanteurs — Le guide de balades musicales</title>
+    <meta name="description" content="Découvrez Paris en musique avec 12 itinéraires sur les traces des grands noms de la chanson française (Édith Piaf, Juliette Gréco, Jacques Brel...). Collection Gallimard Voyage.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-circle">P</div>
+                <span class="logo-text">Paris en chanteurs</span>
+            </a>
+            
+            <button class="burger-menu" id="burgerMenu" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#concept">Le Concept</a></li>
+                    <li><a href="#playlists">Les Playlists</a></li>
+                    <li><a href="#auteur">L'Auteur</a></li>
+                    <li><a href="#extrait">Feuilleter</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#presse">Presse</a></li>
+                    <li><a href="#acheter" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Acheter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero animate-fade-in-up">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge">Nouveauté Littéraire</span>
+                <h1 class="hero-title">
+                    Paris en chanteurs
+                    <span>Le guide de vos balades musicales</span>
+                </h1>
+                <p class="hero-tagline">
+                    12 itinéraires inédits dans les pas des géants de la chanson française. Un ouvrage Gallimard Voyage/Loisirs.
+                </p>
+                <div class="hero-actions">
+                    <a href="#playlists" class="btn btn-primary">Écouter les Playlists</a>
+                    <a href="#extrait" class="btn btn-secondary">Découvrir un extrait</a>
+                </div>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-value">12</span>
+                        <span class="hero-meta-label">Itinéraires</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-value">120+</span>
+                        <span class="hero-meta-label">Chansons</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-value">Paris</span>
+                        <span class="hero-meta-label">À vos pieds</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-mockup-container">
+                <div class="book-shadow-behind"></div>
+                <div class="book-cover">
+                    <div class="book-cover-header">
+                        <span class="book-editor">Gallimard</span>
+                        <br>
+                        <span class="book-collection">Voyages &amp; Loisirs</span>
+                    </div>
+                    <div class="book-cover-title">
+                        <h2 class="book-main-title">PARIS EN CHANTEURS</h2>
+                        <p class="book-sub-title">12 Balades Historiques &amp; Musicales</p>
+                    </div>
+                    <div class="book-cover-illustration" id="heroBookIllustration" style="padding: 0; overflow: hidden;">
+                        <img src="book_cover.png" alt="Aquarelle des toits de Paris" style="width: 100%; height: 100%; object-fit: cover; object-position: center 60%;">
+                    </div>
+                    <div class="book-cover-footer">
+                        <span class="book-author">Par Olivier</span>
+                        <div class="book-logo-gallimard">G</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Le Concept -->
+    <section id="concept" class="concept-section">
+        <div class="container">
+            <h2 class="section-title">Le Concept</h2>
+            <p class="section-subtitle">
+                Une nouvelle façon d'explorer la capitale, mêlant littérature, histoire et chanson française.
+            </p>
+            
+            <div class="concept-grid">
+                <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <img src="sources/Asset 1.png" alt="Illustration guide littéraire" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="concept-number">01</div>
+                    <h3>Un guide littéraire</h3>
+                    <p>12 itinéraires détaillés à travers les quartiers les plus évocateurs de Paris, enrichis d'anecdotes historiques sur les artistes et de descriptions soignées.</p>
+                </div>
+                <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <img src="sources/Asset 2.png" alt="Illustration scan in situ" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="concept-number">02</div>
+                    <h3>L'immersion in situ</h3>
+                    <p>En marchant, scannez les QR codes intégrés dans les pages du livre pour accéder instantanément aux morceaux choisis sans friction.</p>
+                </div>
+                <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
+                        <img src="sources/Asset 3.png" alt="Illustration bande-son" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="concept-number">03</div>
+                    <h3>La bande-son de Paris</h3>
+                    <p>Laissez Piaf chanter dans les escaliers de Montmartre, Gréco murmurer à Saint-Germain, et Brel vibrer à Montparnasse sous vos pas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Les Playlists & Immersive Player Teaser -->
+    <section id="playlists" class="playlists-section">
+        <div class="container">
+            <h2 class="section-title">L'Expérience Immersive</h2>
+            <p class="section-subtitle">
+                Découvrez un avant-goût sonore du projet. Écoutez notre playlist "Teaser" officielle en choisissant votre plateforme de streaming préférée.
+            </p>
+            
+            <div class="teaser-player-container">
+                <div class="teaser-tabs">
+                    <button class="teaser-tab-btn active" data-platform="spotify">Spotify</button>
+                    <button class="teaser-tab-btn" data-platform="deezer">Deezer</button>
+                    <button class="teaser-tab-btn" data-platform="youtube">YouTube</button>
+                </div>
+                <div class="teaser-frame-wrapper">
+                    <!-- Initial loaded frame (Spotify) -->
+                    <iframe id="teaserIframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgn7jofZ3pG?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="teaser-profile-links">
+                    <span>Suivre notre compte officiel :</span>
+                    <a href="#" target="_blank" rel="noopener" id="profileSpotifyBtn" class="profile-link-btn">Spotify</a>
+                    <a href="#" target="_blank" rel="noopener" id="profileDeezerBtn" class="profile-link-btn">Deezer</a>
+                    <a href="#" target="_blank" rel="noopener" id="profileYoutubeBtn" class="profile-link-btn">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: L'Auteur (Olivier) -->
+    <section id="auteur" class="author-section">
+        <div class="container author-grid">
+            <div class="author-image-container">
+                <div class="author-image-shadow"></div>
+                <div class="author-avatar-fallback">
+                    <span class="font-serif">Olivier</span>
+                </div>
+            </div>
+            <div class="author-content">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">L'Auteur</h2>
+                <p class="author-subtitle">Un amoureux passionné des rues et des chansons de Paris</p>
+                <p>Olivier arpente les pavés parisiens depuis plus de vingt ans. Historien et mélomane curieux, il a passé des années à collecter des anecdotes inédites, à cartographier les adresses cultes de la rive gauche et de la rive droite, et à retrouver les échos oubliés du music-hall.</p>
+                <p>À travers ce guide, il ne propose pas une simple visite touristique, mais un voyage sensoriel et historique. Son but : faire revivre l'âme mélodique des faubourgs sous vos yeux et dans vos oreilles.</p>
+                <div class="author-quote">
+                    <blockquote>
+                        « Paris s'est toujours construite en chansons. Ce livre est une invitation à ralentir le pas et à écouter la rumeur poétique des rues. »
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excerpt / Carousel Section -->
+    <section id="extrait" class="excerpt-section">
+        <div class="container">
+            <h2 class="section-title">Feuilleter le Guide</h2>
+            <p class="section-subtitle">
+                Découvrez l'élégance de la mise en page papier de notre guide à travers cet extrait de démonstration.
+            </p>
+            
+            <div class="excerpt-container">
+                <div class="book-reader" id="bookReader">
+                    <div class="book-page-content" id="bookPageContent">
+                        <!-- Loaded dynamically via main.js -->
+                    </div>
+                    
+                    <div class="reader-controls">
+                        <button class="reader-btn" id="prevPageBtn" aria-label="Page précédente" disabled>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <span class="page-indicator" id="pageIndicator">Page 1 / 4</span>
+                        <button class="reader-btn" id="nextPageBtn" aria-label="Page suivante">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section id="agenda" class="agenda-section">
+        <div class="container">
+            <h2 class="section-title">L'Agenda de l'Auteur</h2>
+            <p class="section-subtitle">
+                Séances de dédicaces, rencontres en librairie, conférences ou visites guidées : ne manquez aucun événement autour de la sortie du livre.
+            </p>
+            
+            <div class="agenda-timeline" id="agendaTimeline">
+                <!-- Dynamically loaded events go here -->
+                <div style="text-align: center; padding: 40px; color: var(--color-text-muted);">
+                    Chargement de l'agenda...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Section -->
+    <section id="presse" class="press-section">
+        <div class="container">
+            <h2 class="section-title">La Revue de Presse</h2>
+            <p class="section-subtitle">
+                Ce que les médias disent de « Paris en chanteurs ».
+            </p>
+            
+            <div class="press-grid" id="pressGrid">
+                <!-- Dynamically loaded press items go here -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--color-text-muted);">
+                    Chargement de la revue de presse...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Section -->
+    <section id="acheter" class="purchase-section">
+        <div class="container">
+            <h2 class="section-title">Se Procurer le Guide</h2>
+            <p class="section-subtitle">
+                Soutenez le commerce de proximité en commandant votre livre en ligne puis en le retirant dans la librairie indépendante la plus proche de chez vous.
+            </p>
+            
+            <div class="purchase-grid">
+                <a href="https://www.placedeslibraires.fr" target="_blank" rel="noopener" class="purchase-btn" id="placeDesLibrairesBtn">
+                    <span>Acheter sur Place des Libraires</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </a>
+                
+                <a href="https://www.leslibraires.fr" target="_blank" rel="noopener" class="purchase-btn" id="lesLibrairesBtn">
+                    <span>Acheter sur Les Libraires</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </a>
+                
+                <a href="https://www.gallimard.fr" target="_blank" rel="noopener" class="purchase-btn purchase-btn-gallimard" id="gallimardLinkBtn">
+                    <span>Fiche Éditeur (Gallimard)</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Contact & Footer Action Box -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-card">
+                <div class="contact-icon">✉</div>
+                <h3>Nous Contacter</h3>
+                <p style="margin-bottom: 20px;">Olivier se fera un plaisir de répondre à vos demandes. Sélectionnez le sujet de votre message ci-dessous :</p>
+                
+                <div class="contact-buttons-grid">
+                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Proposition%20de%20d%C3%A9dicace" class="contact-link-card" id="contactDedicaceLink">
+                        <span>✍️ Proposer des dates de dédicaces</span>
+                        <span>➔</span>
+                    </a>
+                    
+                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Demande%20d'extrait%20de%20balade" class="contact-link-card" id="contactExtraitLink">
+                        <span>📖 Demander un extrait ou une balade inédite</span>
+                        <span>➔</span>
+                    </a>
+                    
+                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Balade%20physique%20avec%20Olivier" class="contact-link-card" id="contactWalkLink">
+                        <span>🚶 Proposer une date de balade avec Olivier</span>
+                        <span>➔</span>
+                    </a>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 0.9rem; color: var(--color-text-muted);">
+                    Ou écrivez directement à : <a href="mailto:contact@paris-en-chanteurs.fr" id="contactBtn" style="font-weight: 700;">contact@paris-en-chanteurs.fr</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Paris en chanteurs</h4>
+                    <p>Un guide de balades sonores inédites à travers la capitale. Collection Gallimard Voyages &amp; Loisirs.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Plan du site</h5>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#concept">Le Concept</a></li>
+                        <li><a href="#playlists">Les Playlists</a></li>
+                        <li><a href="#auteur">L'Auteur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Ressources</h5>
+                    <ul>
+                        <li><a href="https://www.placedeslibraires.fr" target="_blank" rel="noopener">Place des Libraires</a></li>
+                        <li><a href="https://www.leslibraires.fr" target="_blank" rel="noopener">Les Libraires</a></li>
+                        <li><a href="mailto:contact@paris-en-chanteurs.fr">Contact Auteur</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Paris en chanteurs. Tous droits réservés. Éditions Gallimard.</p>
+                <a href="admin.html" class="admin-link">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Espace Édition / Administration
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

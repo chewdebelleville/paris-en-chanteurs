@@ -1,0 +1,239 @@
+{
+  "playlists": {
+    "balade1": {
+      "id": "balade1",
+      "number": 1,
+      "title": "La butte Montmartre d'Édith Piaf",
+      "subtitle": "La Môme de la Rue Saint-Vincent",
+      "description": "Retracez les premiers pas de la Môme Piaf, des cours d'immeubles de la rue de Belleville aux escaliers mythiques de la butte Montmartre, là où elle chanta dans la rue pour survivre.",
+      "duration": "1h45",
+      "distance": "2.8 km",
+      "startPoint": "Métro Abbesses (Ligne 12)",
+      "endPoint": "Place du Tertre",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade2": {
+      "id": "balade2",
+      "number": 2,
+      "title": "Saint-Germain-des-Prés de Juliette Gréco",
+      "subtitle": "La Muse de l'Existentialisme",
+      "description": "Plongez dans l'effervescence d'après-guerre. Suivez Juliette Gréco, Boris Vian et Jean-Paul Sartre dans les caves de jazz du Tabou et les cafés littéraires mythiques du boulevard Saint-Germain.",
+      "duration": "2h00",
+      "distance": "3.2 km",
+      "startPoint": "Métro Saint-Germain-des-Prés (Ligne 4)",
+      "endPoint": "Place Saint-Sulpice",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade3": {
+      "id": "balade3",
+      "number": 3,
+      "title": "Belleville & Ménilmontant populaires",
+      "subtitle": "De Maurice Chevalier à Piaf",
+      "description": "Explorez les collines populaires de l'Est parisien. Écoutez le Paris canaille de Maurice Chevalier et les premiers cris d'Édith Piaf sous les réverbères de la rue de Belleville.",
+      "duration": "1h30",
+      "distance": "2.5 km",
+      "startPoint": "Métro Belleville (Ligne 2, 11)",
+      "endPoint": "Parc de Ménilmontant",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade4": {
+      "id": "balade4",
+      "number": 4,
+      "title": "Le Marais intime de Barbara",
+      "subtitle": "La Dame en Noir des Cabarets",
+      "description": "Marchez sur les pas de Barbara. Retrouvez l'ambiance feutrée des cabarets oubliés de la rive droite et le square de la rue des Rosiers où résonnent encore ses mélodies poignantes.",
+      "duration": "1h50",
+      "distance": "3.0 km",
+      "startPoint": "Métro Saint-Paul (Ligne 1)",
+      "endPoint": "Place des Vosges",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade5": {
+      "id": "balade5",
+      "number": 5,
+      "title": "Le Quartier Latin de Georges Brassens",
+      "subtitle": "L'esprit frondeur des bancs publics",
+      "description": "L'esprit libertaire et poétique du poète sétois. Des bancs publics du jardin du Luxembourg aux impasses estudiantines où Brassens grattait sa guitare avec ses copains d'abord.",
+      "duration": "2h15",
+      "distance": "3.5 km",
+      "startPoint": "RER Luxembourg (Ligne B)",
+      "endPoint": "Place de la Contrescarpe",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade6": {
+      "id": "balade6",
+      "number": 6,
+      "title": "Les Grands Boulevards d'Yves Montand",
+      "subtitle": "Flânerie parisienne et music-hall",
+      "description": "Redécouvrez le Paris lumineux du music-hall et du cinéma. Suivez le rythme effréné d'Yves Montand le long des théâtres, passages couverts et grands cinémas du boulevard de Bonne-Nouvelle.",
+      "duration": "1h40",
+      "distance": "2.9 km",
+      "startPoint": "Métro Richelieu-Drouot (Ligne 8, 9)",
+      "endPoint": "Place de la République",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade7": {
+      "id": "balade7",
+      "number": 7,
+      "title": "Pigalle & Clichy de Serge Gainsbourg",
+      "subtitle": "Du Poinçonneur aux nuits d'encre",
+      "description": "L'univers nocturne, sulfureux et poétique de l'homme à la tête de chou. De la station des Lilas aux cabarets de Pigalle, terminez devant sa célèbre façade taguée de la rue de Verneuil.",
+      "duration": "2h00",
+      "distance": "3.3 km",
+      "startPoint": "Métro Pigalle (Ligne 2, 12)",
+      "endPoint": "Métro Blanche (Ligne 2)",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade8": {
+      "id": "balade8",
+      "number": 8,
+      "title": "L'Île de la Cité de Charles Aznavour",
+      "subtitle": "La bohème au fil de la Seine",
+      "description": "Laissez-vous guider sur les ponts et quais de Seine célébrés par Aznavour. De la place Dauphine aux bouquinistes du quai de Montebello, revivez les heures nostalgiques d'un Paris éternel.",
+      "duration": "1h30",
+      "distance": "2.4 km",
+      "startPoint": "Métro Pont-Neuf (Ligne 7)",
+      "endPoint": "Métro Saint-Michel (Ligne 4, RER C)",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade9": {
+      "id": "balade9",
+      "number": 9,
+      "title": "Le Canal Saint-Martin de Renaud",
+      "subtitle": "L'argot des écluses et des faubourgs",
+      "description": "Gérard Lambert, la Dèche et le bistro du coin. Suivez les pas de Renaud Séchan le long des écluses de fer et de pierre du canal Saint-Martin, sous les platanes chers aux titis parisiens.",
+      "duration": "1h45",
+      "distance": "2.8 km",
+      "startPoint": "Métro Jacques Bonsergent (Ligne 5)",
+      "endPoint": "Bassin de la Villette",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade10": {
+      "id": "balade10",
+      "number": 10,
+      "title": "Montparnasse de Jacques Brel",
+      "subtitle": "Les poètes de la Rive Gauche",
+      "description": "Le Montparnasse artistique et musical de Jacques Brel. Du cabaret L'Écluse au cimetière où il repose en pensée à côté de Baudelaire, ressentez l'intensité dramatique du Grand Jacques.",
+      "duration": "2h10",
+      "distance": "3.1 km",
+      "startPoint": "Métro Vavin (Ligne 4)",
+      "endPoint": "Cimetière du Montparnasse",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade11": {
+      "id": "balade11",
+      "number": 11,
+      "title": "La Bastille d'Aristide Bruant",
+      "subtitle": "Dans la rue et les faubourgs",
+      "description": "Découvrez le Paris ouvrier et frondeur chanté par Aristide Bruant. Du Faubourg Saint-Antoine aux ruelles pavées de la Roquette, marchez au rythme de l'accordéon et des complaintes de la rue.",
+      "duration": "1h50",
+      "distance": "3.0 km",
+      "startPoint": "Métro Bastille (Ligne 1, 5, 8)",
+      "endPoint": "Métro Charonne (Ligne 9)",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    },
+    "balade12": {
+      "id": "balade12",
+      "number": 12,
+      "title": "Passy & Auteuil de Léo Ferré",
+      "subtitle": "Les mélodies mélancoliques de la Seine",
+      "description": "Le Paris chic et brumeux de Léo Ferré. Une promenade poétique et romantique des collines de Passy à la Seine, au son des mélodies d'Aragon et de Verlaine mises en musique.",
+      "duration": "2h00",
+      "distance": "3.4 km",
+      "startPoint": "Métro Passy (Ligne 6)",
+      "endPoint": "Pont de Grenelle",
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
+      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+    }
+  },
+  "agenda": [
+    {
+      "id": "event-1",
+      "date": "2026-09-12",
+      "time": "17h00",
+      "type": "Rencontre",
+      "title": "Présentation officielle & Dédicace",
+      "location": "Librairie Delamain (Paris 1er)",
+      "description": "Venez échanger avec l'auteur autour d'un verre de l'amitié et faire dédicacer votre guide.",
+      "link": "https://www.librairie-delamain.com"
+    },
+    {
+      "id": "event-2",
+      "date": "2026-09-20",
+      "time": "15h00",
+      "type": "Balade",
+      "title": "Balade commentée 'Belleville de Piaf'",
+      "location": "Départ métro Belleville",
+      "description": "Une balade inédite de 2h animée par l'auteur, rythmée par des anecdotes historiques et musicales.",
+      "link": "#contact"
+    },
+    {
+      "id": "event-3",
+      "date": "2026-10-04",
+      "time": "18h30",
+      "type": "Conférence",
+      "title": "La Chanson Française et Paris",
+      "location": "Mairie du 11ème arrondissement",
+      "description": "Table ronde sur le patrimoine culturel parisien de la chanson, en compagnie de spécialistes littéraires.",
+      "link": ""
+    }
+  ],
+  "press": [
+    {
+      "id": "press-1",
+      "source": "Le Monde des Livres",
+      "date": "Juillet 2026",
+      "quote": "Une magnifique déambulation poétique et musicale. L'auteur ressuscite avec ferveur l'âme chantante de Paris.",
+      "link": "https://lemonde.fr"
+    },
+    {
+      "id": "press-2",
+      "source": "Télérama",
+      "date": "Août 2026",
+      "quote": "Le compagnon indispensable de vos dimanches. On adore le concept des QR codes pour écouter Piaf ou Brel in situ.",
+      "link": "https://telerama.fr"
+    },
+    {
+      "id": "press-3",
+      "source": "France Inter",
+      "date": "Septembre 2026",
+      "quote": "Un guide qui s'écoute autant qu'il se lit. Une véritable réussite d'édition qui donne envie de battre le pavé.",
+      "link": "https://franceinter.fr"
+    }
+  ],
+  "links": {
+    "placeDesLibraires": "https://www.placedeslibraires.fr",
+    "lesLibraires": "https://www.leslibraires.fr",
+    "contactEmail": "contact@paris-en-chanteurs.fr",
+    "gallimardLink": "https://www.gallimard.fr",
+    "teaserSpotify": "https://open.spotify.com/embed/playlist/37i9dQZF1DXdgn7jofZ3pG?utm_source=generator",
+    "teaserDeezer": "https://widget.deezer.com/widget/dark/playlist/3110260442",
+    "teaserYoutube": "https://www.youtube.com/embed/videoseries?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2",
+    "profileSpotify": "https://open.spotify.com/user/parisenchanteurs",
+    "profileDeezer": "https://www.deezer.com/fr/profile/parisenchanteurs",
+    "profileYoutube": "https://music.youtube.com/channel/parisenchanteurs"
+  }
+}

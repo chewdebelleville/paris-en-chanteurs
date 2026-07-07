@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration — Paris en chanteurs</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle">P</div>
+                <span class="logo-text">Paris en chanteurs — Édition</span>
+            </a>
+            <a href="index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">
+                Retour au site
+            </a>
+        </div>
+    </header>
+
+    <!-- Password Screen (Shown initially) -->
+    <div id="loginScreen" class="admin-login-screen">
+        <div class="login-card animate-fade-in-up">
+            <div class="login-icon">🔒</div>
+            <h2>Espace Administration</h2>
+            <p>Veuillez saisir le mot de passe défini pour modifier les données du guide.</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminPassword">Mot de passe</label>
+                    <input type="password" id="adminPassword" placeholder="Saisir le mot de passe..." required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Se connecter</button>
+                <div id="loginError" class="form-error">Mot de passe incorrect.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard (Hidden initially) -->
+    <main id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <div class="container">
+            <div class="admin-header-actions">
+                <div>
+                    <h1 class="font-serif" style="font-size: 2.5rem; color: var(--color-primary-dark);">Panneau de Configuration</h1>
+                    <p style="color: var(--color-text-muted);">Modifiez vos playlists, votre agenda et vos articles de presse ci-dessous.</p>
+                </div>
+                
+                <div class="export-actions">
+                    <button id="exportJsonBtn" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Exporter data.json
+                    </button>
+                </div>
+            </div>
+
+            <!-- Warning banner about how static files work -->
+            <div class="admin-banner-info">
+                <strong>💡 Comment appliquer vos changements ?</strong>
+                <p>Après avoir effectué vos modifications, cliquez sur le bouton <strong>"Exporter data.json"</strong> pour télécharger le nouveau fichier de configuration. Il vous suffira ensuite de téléverser ce fichier <code>data.json</code> sur votre serveur OVH (dans le répertoire racine de votre site) pour mettre à jour instantanément les informations en ligne sans modifier le code HTML.</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="tab-playlists">Playlists des 12 Balades</button>
+                <button class="tab-btn" data-tab="tab-agenda">Agenda &amp; Événements</button>
+                <button class="tab-btn" data-tab="tab-press">Espace Presse</button>
+                <button class="tab-btn" data-tab="tab-links">Liens Généraux &amp; Achat</button>
+            </div>
+
+            <!-- Tab Content: Playlists -->
+            <section id="tab-playlists" class="tab-content active-content">
+                <h2 class="font-serif" style="font-size: 1.8rem; margin-bottom: 20px;">Playlists de diffusion</h2>
+                <div class="playlists-list" id="adminPlaylistsList">
+                    <!-- Loaded dynamically via admin.js -->
+                </div>
+            </section>
+
+            <!-- Tab Content: Agenda -->
+            <section id="tab-agenda" class="tab-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="font-serif" style="font-size: 1.8rem;">Événements à l'Agenda</h2>
+                    <button id="addEventBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+                        + Ajouter un événement
+                    </button>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Date &amp; Heure</th>
+                                <th>Type</th>
+                                <th>Titre / Événement</th>
+                                <th>Lieu</th>
+                                <th>Lien externe</th>
+                                <th style="width: 120px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminAgendaTableBody">
+                            <!-- Loaded dynamically via admin.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Tab Content: Press -->
+            <section id="tab-press" class="tab-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="font-serif" style="font-size: 1.8rem;">Revue de Presse</h2>
+                    <button id="addPressBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+                        + Ajouter un article
+                    </button>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Date d'apparition</th>
+                                <th>Citation marquante</th>
+                                <th>Lien article</th>
+                                <th style="width: 120px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminPressTableBody">
+                            <!-- Loaded dynamically via admin.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Tab Content: Links -->
+            <section id="tab-links" class="tab-content">
+                <h2 class="font-serif" style="font-size: 1.8rem; margin-bottom: 20px;">Configuration des Liens de Vente &amp; Contacts</h2>
+                <form id="adminLinksForm" class="admin-card-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="linkPlaceDesLibraires">Lien Place des Libraires</label>
+                            <input type="url" id="linkPlaceDesLibraires" placeholder="https://www.placedeslibraires.fr/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkLesLibraires">Lien Les Libraires</label>
+                            <input type="url" id="linkLesLibraires" placeholder="https://www.leslibraires.fr/..." required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="linkGallimard">Lien Fiche Éditeur (Gallimard)</label>
+                            <input type="url" id="linkGallimard" placeholder="https://www.gallimard.fr/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkContactEmail">Adresse Email de Contact</label>
+                            <input type="email" id="linkContactEmail" placeholder="contact@paris-en-chanteurs.fr" required>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-serif" style="font-size: 1.4rem; margin: 30px 0 15px 0; color: var(--color-primary-dark); border-top: 1px dashed var(--color-secondary-dark); padding-top: 20px;">Playlists "Teaser" &amp; Comptes Officiels</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="linkTeaserSpotify">Embed Playlist Teaser (Spotify)</label>
+                            <input type="url" id="linkTeaserSpotify" placeholder="https://open.spotify.com/embed/playlist/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkProfileSpotify">Lien Profil Public (Spotify)</label>
+                            <input type="url" id="linkProfileSpotify" placeholder="https://open.spotify.com/user/..." required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="linkTeaserDeezer">Embed Playlist Teaser (Deezer)</label>
+                            <input type="url" id="linkTeaserDeezer" placeholder="https://widget.deezer.com/widget/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkProfileDeezer">Lien Profil Public (Deezer)</label>
+                            <input type="url" id="linkProfileDeezer" placeholder="https://www.deezer.com/fr/profile/..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="linkTeaserYoutube">Embed Playlist Teaser (YouTube)</label>
+                            <input type="url" id="linkTeaserYoutube" placeholder="https://www.youtube.com/embed/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkProfileYoutube">Lien Profil Public (YouTube)</label>
+                            <input type="url" id="linkProfileYoutube" placeholder="https://music.youtube.com/channel/..." required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-secondary" style="margin-top: 10px;">Enregistrer les Liens</button>
+                    <span id="linksSaveStatus" class="save-status-msg">Enregistré !</span>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal: Add/Edit Event -->
+    <div id="eventModal" class="admin-modal">
+        <div class="modal-content animate-fade-in-up">
+            <h3 id="modalEventTitle" class="font-serif" style="font-size: 1.8rem; margin-bottom: 20px;">Ajouter un événement</h3>
+            <form id="eventForm">
+                <input type="hidden" id="eventId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDate">Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Heure</label>
+                        <input type="text" id="eventTime" placeholder="ex: 18h00 ou 15h00" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventType">Type d'événement</label>
+                        <select id="eventType" required>
+                            <option value="Rencontre">Rencontre</option>
+                            <option value="Dédicace">Dédicace</option>
+                            <option value="Balade">Balade</option>
+                            <option value="Conférence">Conférence</option>
+                            <option value="Médias">Médias (Radio, TV)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Lieu</label>
+                        <input type="text" id="eventLocation" placeholder="ex: Librairie Delamain (Paris 1er)" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="eventTitle">Titre de l'événement</label>
+                    <input type="text" id="eventTitle" placeholder="ex: Séance de dédicaces pour la sortie" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDescription">Description</label>
+                    <textarea id="eventDescription" placeholder="Description de l'événement..." rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventLink">Lien d'information (optionnel)</label>
+                    <input type="url" id="eventLink" placeholder="https://...">
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-outline closeModalBtn">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Add/Edit Press Quote -->
+    <div id="pressModal" class="admin-modal">
+        <div class="modal-content animate-fade-in-up">
+            <h3 id="modalPressTitle" class="font-serif" style="font-size: 1.8rem; margin-bottom: 20px;">Ajouter une citation presse</h3>
+            <form id="pressForm">
+                <input type="hidden" id="pressId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pressSource">Média / Source</label>
+                        <input type="text" id="pressSource" placeholder="ex: Le Monde, Télérama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pressDate">Date d'apparition</label>
+                        <input type="text" id="pressDate" placeholder="ex: Juillet 2026" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pressQuote">Citation marquante</label>
+                    <textarea id="pressQuote" placeholder="Saisir l'extrait de l'article de presse..." rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pressLink">Lien vers l'article (optionnel)</label>
+                    <input type="url" id="pressLink" placeholder="https://...">
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-outline closeModalBtn">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
