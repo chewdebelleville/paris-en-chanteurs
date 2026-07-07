@@ -171,16 +171,6 @@
   },
   "agenda": [
     {
-      "id": "event-1783460283710",
-      "date": "2026-08-01",
-      "time": "18h00",
-      "type": "Balade",
-      "location": "Père-Lachaise",
-      "title": "Déambulation ",
-      "description": "Déambulation au Père-Lachaise",
-      "link": ""
-    },
-    {
       "id": "event-1",
       "date": "2026-09-12",
       "time": "17h00",
@@ -232,13 +222,6 @@
       "date": "Septembre 2026",
       "quote": "Un guide qui s'écoute autant qu'il se lit. Une véritable réussite d'édition qui donne envie de battre le pavé.",
       "link": "https://franceinter.fr"
-    },
-    {
-      "id": "press-1783460149659",
-      "source": "La Parisien",
-      "date": "Septembre 2026",
-      "quote": "Une magnifique déambulation poétique et musicale. L'auteur ressuscite avec ferveur l'âme chantante de Paris.",
-      "link": "https://www.leparisien.fr"
     }
   ],
   "links": {
