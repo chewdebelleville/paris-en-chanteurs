@@ -90,21 +90,53 @@ a:hover {
 section {
   padding: 80px 0;
 }
+section[id] {
+  scroll-margin-top: 80px;
+}
 
 /* Header & Navigation */
 header {
   position: sticky;
   top: 0;
-  background-color: rgba(254, 236, 218, 0.9); /* Translucent cream */
-  backdrop-filter: blur(10px);
+  background-color: var(--color-primary); /* Fond vert #009f70 */
+  border-bottom: 1px solid var(--color-primary-dark);
   z-index: 100;
-  border-bottom: 1px solid var(--color-secondary-dark);
   transition: var(--transition-smooth);
 }
 
 header.scrolled {
   padding: 12px 0;
   box-shadow: var(--shadow-sm);
+  background-color: #00825c; /* Vert plus foncé */
+}
+
+/* Logo updates for green header */
+header .logo-circle {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+header .logo-text {
+  color: var(--color-white);
+}
+header .logo:hover .logo-text {
+  color: var(--color-secondary);
+}
+
+/* Nav links updates for green header */
+header .nav-links a {
+  color: var(--color-secondary);
+}
+header .nav-links a:hover,
+header .nav-links a.active {
+  color: var(--color-white);
+}
+header .nav-links a::after {
+  background-color: var(--color-white);
+}
+
+/* Burger menu updates for green header */
+header .burger-menu span {
+  background-color: var(--color-white);
 }
 
 .nav-container {
@@ -251,7 +283,8 @@ header.scrolled {
   position: relative;
   overflow: hidden;
   padding: 80px 0;
-  border-bottom: 1px solid var(--color-secondary-dark);
+  background-color: var(--color-primary); /* Fond vert #009f70 */
+  border-bottom: 1px solid var(--color-primary-dark);
 }
 
 .hero-grid {
@@ -276,9 +309,12 @@ header.scrolled {
 }
 
 .hero-title {
+  font-family: 'Raghero', var(--font-serif);
+  text-transform: uppercase;
   font-size: 4rem;
   margin-bottom: 20px;
-  color: var(--color-primary-dark);
+  color: var(--color-white);
+  line-height: 1.1;
 }
 
 .hero-title span {
@@ -286,13 +322,16 @@ header.scrolled {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--color-text-main);
+  color: var(--color-secondary); /* Blanc crème pour le sous-titre */
+  text-transform: none; /* Pas en Raghero/majuscules */
+  font-size: 2.2rem;
+  margin-top: 10px;
 }
 
 .hero-tagline {
   font-size: 1.3rem;
   margin-bottom: 30px;
-  color: var(--color-text-muted);
+  color: var(--color-secondary); /* Blanc crème pour le pitch */
   font-family: var(--font-serif);
   border-left: 3px solid var(--color-accent);
   padding-left: 20px;
@@ -303,6 +342,29 @@ header.scrolled {
   gap: 16px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+}
+
+.hero-actions .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-actions .btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.hero-actions .btn-secondary {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.hero-actions .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .hero-meta {
@@ -319,12 +381,12 @@ header.scrolled {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
 .hero-meta-label {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: var(--color-secondary-dark);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -466,6 +528,8 @@ header.scrolled {
 
 /* Walk Playlists Grid (Hub) */
 .section-title {
+  font-family: 'Raghero', var(--font-serif);
+  text-transform: uppercase;
   text-align: center;
   margin-bottom: 16px;
   font-size: 2.8rem;

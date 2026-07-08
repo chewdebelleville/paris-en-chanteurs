@@ -25,12 +25,14 @@
             
             <nav>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#concept">Le guide</a></li>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#concept">Le Concept</a></li>
                     <li><a href="#playlists">Les Playlists</a></li>
                     <li><a href="#auteur">L'Auteur</a></li>
-                    <li id="navLinkAgenda"><a href="#agenda">Agenda</a></li>
-                    <li id="navLinkPresse"><a href="#presse">Presse</a></li>
-                    <li><a href="#acheter" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem; color: #005c41; background-color: var(--color-white); border: none;">Acheter</a></li>
+                    <li><a href="#extrait">Feuilleter</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#presse">Presse</a></li>
+                    <li><a href="#acheter" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">Acheter</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,16 +47,12 @@
                     Paris en chanteurs
                     <span>Le guide de vos balades musicales</span>
                 </h1>
-                <div class="hero-exergue" style="font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-secondary); margin-bottom: 25px; border-left: 2px solid var(--color-accent); padding-left: 15px; line-height: 1.5;">
-                    « Longtemps, longtemps, longtemps, après que les poètes ont disparu, leurs chansons courent encore dans les rues. »
-                    <span style="display: block; font-size: 0.95rem; font-style: normal; margin-top: 5px; opacity: 0.8;">— L’Âme des Poètes, Charles Trenet</span>
-                </div>
-                <p class="hero-tagline" style="border-left: none; padding-left: 0; font-size: 1.25rem;">
-                    Tous les grands artistes de la chanson française n’ont eu qu’une hâte : rejoindre Paname. Pour son décor, pour sa longue tradition de poésie sous chaque pont, ils ont tous ajouté leur couplet au vaste répertoire des chansons sur Paris. Ces 12 promenades vous invitent à cheminer sur leurs traces.
+                <p class="hero-tagline">
+                    12 itinéraires inédits dans les pas des géants de la chanson française. Un ouvrage Gallimard Voyage/Loisirs.
                 </p>
                 <div class="hero-actions">
                     <a href="#playlists" class="btn btn-primary">Écouter les Playlists</a>
-                    <a href="sources/extrait.pdf" download class="btn btn-secondary">Télécharger un extrait</a>
+                    <a href="#extrait" class="btn btn-secondary">Découvrir un extrait</a>
                 </div>
                 <div class="hero-meta">
                     <div class="hero-meta-item">
@@ -85,7 +83,7 @@
                         <p class="book-sub-title">12 Balades Historiques &amp; Musicales</p>
                     </div>
                     <div class="book-cover-illustration" id="heroBookIllustration" style="padding: 0; overflow: hidden;">
-                        <img src="sources/hardy-dutronc.png" alt="Couverture Paris en chanteurs" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="book_cover.png" alt="Aquarelle des toits de Paris" style="width: 100%; height: 100%; object-fit: cover; object-position: center 60%;">
                     </div>
                     <div class="book-cover-footer">
                         <span class="book-author">Par Olivier</span>
@@ -96,10 +94,10 @@
         </div>
     </section>
 
-    <!-- Section 2: Le Guide -->
+    <!-- Section 2: Le Concept -->
     <section id="concept" class="concept-section">
         <div class="container">
-            <h2 class="section-title">Le Guide</h2>
+            <h2 class="section-title">Le Concept</h2>
             <p class="section-subtitle">
                 Une nouvelle façon d'explorer la capitale, mêlant littérature, histoire et chanson française.
             </p>
@@ -107,27 +105,27 @@
             <div class="concept-grid">
                 <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
-                        <img src="sources/Asset 1.png" alt="Le Guide Papier" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <img src="sources/Asset 1.png" alt="Illustration guide littéraire" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                     </div>
                     <div class="concept-number">01</div>
-                    <h3>Une randonnée géographique &amp; historique</h3>
-                    <p>Ici, c’est la géographie qui dicte l’histoire. Si les balades des cimetières relèvent de la promenade du dimanche, les autres s’apparentent à de la randonnée, voire au trek urbain. Les artistes évoqués ont inscrit leur histoire dans suffisamment de lieux rapprochés pour concevoir une vraie promenade. Et pour les sédentaires, elles sont aussi conçues pour se consommer sur canapé !</p>
+                    <h3>Un guide littéraire</h3>
+                    <p>12 itinéraires détaillés à travers les quartiers les plus évocateurs de Paris, enrichis d'anecdotes historiques sur les artistes et de descriptions soignées.</p>
                 </div>
                 <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
-                        <img src="sources/Asset 2.png" alt="L'expérience in situ" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <img src="sources/Asset 2.png" alt="Illustration scan in situ" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                     </div>
                     <div class="concept-number">02</div>
-                    <h3>Solliciter l'imagination sur place</h3>
-                    <p>La ville est un organisme vivant en constante évolution où les lieux parfois s'effacent à coups de pelleteuse. Heureusement, les chansons restent pour nous faciliter le voyage. En cheminant sur leurs traces, le guide vous aide à redécouvrir les soupentes, les hôtels meublés et les cafés où ils ont triomphé.</p>
+                    <h3>L'immersion in situ</h3>
+                    <p>En marchant, scannez les QR codes intégrés dans les pages du livre pour accéder instantanément aux morceaux choisis sans friction.</p>
                 </div>
                 <div class="concept-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <div style="background-color: var(--color-secondary); padding: 15px; border-radius: var(--radius-sm); margin-bottom: 20px; width: 100%; display: flex; align-items: center; justify-content: center; height: 160px;">
-                        <img src="sources/Asset 3.png" alt="La bande-son" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        <img src="sources/Asset 3.png" alt="Illustration bande-son" style="max-height: 100%; max-width: 100%; object-fit: contain;">
                     </div>
                     <div class="concept-number">03</div>
-                    <h3>Une chaîne hi-fi dans la poche</h3>
-                    <p>Nos balades sont musicales. À chaque promenade est associée une playlist à écouter en chemin, à télécharger sur votre plateforme préférée. Flânez en solo avec des écouteurs ou en groupe avec une petite enceinte pour une immersion totale au cœur des chansons qui ont fait Paris.</p>
+                    <h3>La bande-son de Paris</h3>
+                    <p>Laissez Piaf chanter dans les escaliers de Montmartre, Gréco murmurer à Saint-Germain, et Brel vibrer à Montparnasse sous vos pas.</p>
                 </div>
             </div>
         </div>
@@ -158,19 +156,6 @@
                     <a href="#" target="_blank" rel="noopener" id="profileYoutubeBtn" class="profile-link-btn">YouTube</a>
                 </div>
             </div>
-            
-            <!-- Grille des 12 balades restaurée -->
-            <h3 class="section-title" style="font-size: 2.2rem; text-align: center; margin: 70px 0 20px 0;">Les 12 Itinéraires</h3>
-            <p class="section-subtitle" style="margin-bottom: 50px;">
-                Chaque parcours possède sa propre playlist de 10 morceaux pour vous accompagner pas à pas. Sélectionnez votre balade :
-            </p>
-            
-            <div class="playlists-grid" id="playlistsGrid">
-                <!-- Dynamically loaded walks go here -->
-                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--color-text-muted);">
-                    Chargement des balades...
-                </div>
-            </div>
         </div>
     </section>
 
@@ -192,6 +177,34 @@
                     <blockquote>
                         « Paris s'est toujours construite en chansons. Ce livre est une invitation à ralentir le pas et à écouter la rumeur poétique des rues. »
                     </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excerpt / Carousel Section -->
+    <section id="extrait" class="excerpt-section">
+        <div class="container">
+            <h2 class="section-title">Feuilleter le Guide</h2>
+            <p class="section-subtitle">
+                Découvrez l'élégance de la mise en page papier de notre guide à travers cet extrait de démonstration.
+            </p>
+            
+            <div class="excerpt-container">
+                <div class="book-reader" id="bookReader">
+                    <div class="book-page-content" id="bookPageContent">
+                        <!-- Loaded dynamically via main.js -->
+                    </div>
+                    
+                    <div class="reader-controls">
+                        <button class="reader-btn" id="prevPageBtn" aria-label="Page précédente" disabled>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <span class="page-indicator" id="pageIndicator">Page 1 / 4</span>
+                        <button class="reader-btn" id="nextPageBtn" aria-label="Page suivante">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -301,18 +314,18 @@
                 <div class="footer-links">
                     <h5>Plan du site</h5>
                     <ul>
-                        <li><a href="#concept">Le guide</a></li>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#concept">Le Concept</a></li>
                         <li><a href="#playlists">Les Playlists</a></li>
                         <li><a href="#auteur">L'Auteur</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h5>Où me trouver</h5>
+                    <h5>Ressources</h5>
                     <ul>
-                        <li><a href="mailto:contact@paris-en-chanteurs.fr" id="contactFooterBtn">Contact (E-mail)</a></li>
-                        <li><a href="https://instagram.com/parisenchanteurs" target="_blank" rel="noopener" id="instagramBtn">Instagram</a></li>
-                        <li><a href="https://www.leslibraires.fr" target="_blank" rel="noopener" id="lesLibrairesFooterBtn">Les libraires</a></li>
-                        <li><a href="https://www.librest.com" target="_blank" rel="noopener" id="librestBtn">Librest</a></li>
+                        <li><a href="https://www.placedeslibraires.fr" target="_blank" rel="noopener">Place des Libraires</a></li>
+                        <li><a href="https://www.leslibraires.fr" target="_blank" rel="noopener">Les Libraires</a></li>
+                        <li><a href="mailto:contact@paris-en-chanteurs.fr">Contact Auteur</a></li>
                     </ul>
                 </div>
             </div>

@@ -16,26 +16,35 @@
                 <div class="logo-circle">P</div>
                 <span class="logo-text">Paris en chanteurs — Édition</span>
             </a>
-            <a href="index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">
-                Retour au site
-            </a>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">
+                    Retour au site
+                </a>
+                <button id="logoutBtn" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem; border-color: var(--color-accent); color: var(--color-accent-dark); background: transparent; display: none;">
+                    Déconnexion
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Password Screen (Shown initially) -->
     <div id="loginScreen" class="admin-login-screen">
-        <div class="login-card animate-fade-in-up">
+        <div class="login-card animate-fade-in-up" style="max-width: 450px;">
             <div class="login-icon">🔒</div>
-            <h2>Espace Administration</h2>
-            <p>Veuillez saisir le mot de passe défini pour modifier les données du guide.</p>
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Espace Administration</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: var(--color-text-muted);">Veuillez vous connecter pour modifier les données du guide.</p>
             
             <form id="loginForm">
-                <div class="form-group">
-                    <label for="adminPassword">Mot de passe</label>
-                    <input type="password" id="adminPassword" placeholder="Saisir le mot de passe..." required>
+                <div class="form-group" style="text-align: left;">
+                    <label for="adminEmail">Adresse e-mail</label>
+                    <input type="email" id="adminEmail" placeholder="Saisir votre adresse e-mail..." required style="width: 100%; padding: 12px; border: 1px solid var(--color-secondary-dark); border-radius: var(--radius-sm); margin-top: 8px;">
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Se connecter</button>
-                <div id="loginError" class="form-error">Mot de passe incorrect.</div>
+                <div class="form-group" style="text-align: left; margin-top: 15px;">
+                    <label for="adminPassword">Mot de passe</label>
+                    <input type="password" id="adminPassword" placeholder="Saisir votre mot de passe..." required style="width: 100%; padding: 12px; border: 1px solid var(--color-secondary-dark); border-radius: var(--radius-sm); margin-top: 8px;">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 25px;">Se connecter</button>
+                <div id="loginError" class="form-error" style="display: none; color: var(--color-accent-dark); text-align: center; margin-top: 15px; font-weight: bold;">Identifiants incorrects ou non autorisés.</div>
             </form>
         </div>
     </div>
@@ -155,6 +164,10 @@
                         <div class="form-group">
                             <label for="linkContactEmail">Adresse Email de Contact</label>
                             <input type="email" id="linkContactEmail" placeholder="contact@paris-en-chanteurs.fr" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkExcerptPdf">Chemin de l'Extrait PDF</label>
+                            <input type="text" id="linkExcerptPdf" placeholder="sources/extrait.pdf" required>
                         </div>
                     </div>
                     
@@ -284,6 +297,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="admin.js"></script>
 </body>
 </html>

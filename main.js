@@ -5,55 +5,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // State management
     let siteData = null;
-    let currentExcerptPage = 0;
-    
-    // Mock Book Excerpt Pages (styled like Gallimard layouts)
-    const excerptPages = [
-        {
-            headerLeft: "Paris en chanteurs",
-            headerRight: "Introduction",
-            content: `
-                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--color-primary-dark);">Prologue : Battre le pavé en musique</h3>
-                <p>Paris ne s'est pas seulement construite avec des pierres, elle s'est écrite en chansons. De la butte Montmartre au canal Saint-Martin, chaque carrefour, chaque ruelle, chaque bistrot possède sa propre mélodie historique.</p>
-                <p>Ce guide propose un voyage inédit. Douze itinéraires tracés sur la carte de la ville pour retrouver les esprits d'Édith Piaf, Jacques Brel, Charles Aznavour, Serge Gainsbourg ou Barbara. Équipez-vous de vos écouteurs, chaussez vos souliers, scannez le QR code de votre parcours, et laissez la nostalgie chanter à vos oreilles.</p>
-            `,
-            footer: "Page I"
-        },
-        {
-            headerLeft: "Balade 1",
-            headerRight: "Montmartre de Piaf",
-            content: `
-                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; text-align: center; margin-bottom: 15px; color: var(--color-primary-dark);">L'escalier de la rue Chappe</h3>
-                <p>C'est ici, sur ces marches abruptes, que la jeune Édith Gassion chantait à pleins poumons pour quelques pièces lancées des fenêtres par les habitants du quartier. La voix était déjà là, brute, immense, déchirant le brouillard parisien.</p>
-                <p><em>« Quand elle chantait sur les boulevards, elle avait l'air d'une petite bête traquée »</em>, disait son premier pygmalion. En remontant vers la place du Tertre, écoutez l'écho de sa voix sur les pavés et laissez-vous emporter par l'esprit de bohème.</p>
-                <div class="book-page-illustration" style="background-color: var(--color-secondary); padding: 15px; text-align: center; border: 1px dashed var(--color-primary-light);">
-                    <span style="font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--color-primary-dark);">Plan de l'Itinéraire 1 : Métro Abbesses ➔ Rue Lepic ➔ Rue Saint-Vincent ➔ Basilique du Sacré-Cœur</span>
-                </div>
-            `,
-            footer: "Page 15"
-        },
-        {
-            headerLeft: "Balade 2",
-            headerRight: "Saint-Germain",
-            content: `
-                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--color-primary-dark);">Le Tabou &amp; l'Existentialisme</h3>
-                <p>Sous les voûtes de pierre de la rue Dauphine résonnaient le jazz de Boris Vian et la poésie de Prévert. Juliette Gréco, silhouette noire et cheveux longs, y devint la muse absolue d'une jeunesse qui voulait vivre intensément après les années sombres.</p>
-                <p>En traversant le boulevard Saint-Germain, vous passerez devant le Café de Flore et Les Deux Magots. Prenez le temps de vous asseoir sur un banc du square Laurent-Prache, là où Gréco aimait refaire le monde avec Sartre et Beauvoir au son des trompettes de la nuit.</p>
-            `,
-            footer: "Page 34"
-        },
-        {
-            headerLeft: "Paris en chanteurs",
-            headerRight: "Conseils pratiques",
-            content: `
-                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--color-primary-dark);">Comment profiter de l'expérience ?</h3>
-                <p><strong>1. Le bon matériel :</strong> Un casque audio ou des écouteurs de bonne qualité pour vous isoler du bruit de la circulation et ressentir chaque nuance musicale.</p>
-                <p><strong>2. Le tempo :</strong> Marchez sans vous presser. Les balades sont conçues pour durer entre 1h30 et 2h. N'hésitez pas à faire pause sur votre playlist lors des explications historiques détaillées dans le guide.</p>
-                <p><strong>3. La sécurité :</strong> Restez attentifs aux passages piétons et à l'environnement. La musique accompagne vos pas, mais Paris reste une ville en mouvement perpétuel ! Bon voyage.</p>
-            `,
-            footer: "Page 180"
-        }
-    ];
 
     // UI Elements
     const burgerMenu = document.getElementById('burgerMenu');
@@ -65,17 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const agendaTimeline = document.getElementById('agendaTimeline');
     const pressGrid = document.getElementById('pressGrid');
     
-    // Book Excerpt Elements
-    const bookPageContent = document.getElementById('bookPageContent');
-    const prevPageBtn = document.getElementById('prevPageBtn');
-    const nextPageBtn = document.getElementById('nextPageBtn');
-    const pageIndicator = document.getElementById('pageIndicator');
-    
     // External links buttons
     const placeDesLibrairesBtn = document.getElementById('placeDesLibrairesBtn');
     const lesLibrairesBtn = document.getElementById('lesLibrairesBtn');
     const gallimardLinkBtn = document.getElementById('gallimardLinkBtn');
-    const contactBtn = document.getElementById('contactBtn');
 
     // 1. Mobile navigation menu toggle
     burgerMenu.addEventListener('click', () => {
@@ -108,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function highlightActiveNavLink() {
         const scrollPosition = window.scrollY + 100;
-        const sections = ['playlists', 'extrait', 'agenda', 'presse'];
+        const sections = ['concept', 'playlists', 'auteur', 'agenda', 'presse'];
         
         let activeSection = null;
         
         for (const sectionId of sections) {
             const el = document.getElementById(sectionId);
-            if (el) {
+            if (el && el.offsetHeight > 0) {
                 const top = el.offsetTop;
                 const height = el.offsetHeight;
                 if (scrollPosition >= top && scrollPosition < top + height) {
@@ -156,52 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Excerpt Book Reader Carousel Logic
-    function updateBookReader() {
-        const page = excerptPages[currentExcerptPage];
-        bookPageContent.innerHTML = `
-            <div class="book-page-header">
-                <span>${page.headerLeft}</span>
-                <span>${page.headerRight}</span>
-            </div>
-            <div class="book-page-body">
-                ${page.content}
-            </div>
-            <div class="book-page-footer">
-                <span>${page.footer}</span>
-            </div>
-        `;
-        
-        pageIndicator.textContent = `Page ${currentExcerptPage + 1} / ${excerptPages.length}`;
-        prevPageBtn.disabled = currentExcerptPage === 0;
-        nextPageBtn.disabled = currentExcerptPage === excerptPages.length - 1;
-    }
-
-    prevPageBtn.addEventListener('click', () => {
-        if (currentExcerptPage > 0) {
-            bookPageContent.style.opacity = 0;
-            setTimeout(() => {
-                currentExcerptPage--;
-                updateBookReader();
-                bookPageContent.style.opacity = 1;
-            }, 150);
-        }
-    });
-
-    nextPageBtn.addEventListener('click', () => {
-        if (currentExcerptPage < excerptPages.length - 1) {
-            bookPageContent.style.opacity = 0;
-            setTimeout(() => {
-                currentExcerptPage++;
-                updateBookReader();
-                bookPageContent.style.opacity = 1;
-            }, 150);
-        }
-    });
-
-    // Initialize reader
-    updateBookReader();
-
     // 4. Fetch dynamic data from data.json
     fetch('data.json')
         .then(response => {
@@ -212,9 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             siteData = data;
+            
+            // Dynamic hiding for Agenda
+            const navLinkAgenda = document.getElementById('navLinkAgenda');
+            const sectionAgenda = document.getElementById('agenda');
+            if (!data.agenda || data.agenda.length === 0) {
+                if (navLinkAgenda) navLinkAgenda.classList.add('d-none');
+                if (sectionAgenda) sectionAgenda.classList.add('d-none');
+            } else {
+                if (navLinkAgenda) navLinkAgenda.classList.remove('d-none');
+                if (sectionAgenda) sectionAgenda.classList.remove('d-none');
+                renderAgenda(data.agenda);
+            }
+
+            // Dynamic hiding for Presse
+            const navLinkPresse = document.getElementById('navLinkPresse');
+            const sectionPresse = document.getElementById('presse');
+            if (!data.press || data.press.length === 0) {
+                if (navLinkPresse) navLinkPresse.classList.add('d-none');
+                if (sectionPresse) sectionPresse.classList.add('d-none');
+            } else {
+                if (navLinkPresse) navLinkPresse.classList.remove('d-none');
+                if (sectionPresse) sectionPresse.classList.remove('d-none');
+                renderPress(data.press);
+            }
+
             renderPlaylists(data.playlists);
-            renderAgenda(data.agenda);
-            renderPress(data.press);
             updateLinks(data.links);
         })
         .catch(err => {
@@ -376,9 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gallimardLinkBtn && links.gallimardLink) {
             gallimardLinkBtn.href = links.gallimardLink;
         }
-        if (contactBtn && links.contactEmail) {
-            contactBtn.href = `mailto:${links.contactEmail}`;
-            contactBtn.textContent = links.contactEmail;
+        const contactFooterBtn = document.getElementById('contactFooterBtn');
+        if (contactFooterBtn && links.contactEmail) {
+            contactFooterBtn.href = `mailto:${links.contactEmail}`;
         }
 
         // Teaser Player Embeds and profiles
@@ -398,21 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (profileYoutubeBtn && links.profileYoutube) {
             profileYoutubeBtn.href = links.profileYoutube;
-        }
-
-        // Redesigned contact buttons with specific mail subjects
-        const contactDedicaceLink = document.getElementById('contactDedicaceLink');
-        const contactExtraitLink = document.getElementById('contactExtraitLink');
-        const contactWalkLink = document.getElementById('contactWalkLink');
-
-        if (contactDedicaceLink && links.contactEmail) {
-            contactDedicaceLink.href = `mailto:${links.contactEmail}?subject=Paris%20en%20chanteurs%20-%20Proposition%20de%20d%C3%A9dicace`;
-        }
-        if (contactExtraitLink && links.contactEmail) {
-            contactExtraitLink.href = `mailto:${links.contactEmail}?subject=Paris%20en%20chanteurs%20-%20Demande%20d'extrait%20de%20balade`;
-        }
-        if (contactWalkLink && links.contactEmail) {
-            contactWalkLink.href = `mailto:${links.contactEmail}?subject=Paris%20en%20chanteurs%20-%20Balade%20physique%20avec%20Olivier`;
         }
     }
 });

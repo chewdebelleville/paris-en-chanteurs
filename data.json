@@ -251,6 +251,8 @@
     "teaserYoutube": "https://www.youtube.com/embed/videoseries?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2",
     "profileSpotify": "https://open.spotify.com/user/parisenchanteurs",
     "profileDeezer": "https://www.deezer.com/fr/profile/parisenchanteurs",
-    "profileYoutube": "https://music.youtube.com/channel/parisenchanteurs"
-  }
+    "profileYoutube": "https://music.youtube.com/channel/parisenchanteurs",
+    "excerptPdf": "sources/extrait.pdf"
+  },
+  "author": "Olivier"
 }
