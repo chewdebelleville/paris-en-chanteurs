@@ -78,27 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Teaser Player Tab Switching
-    const teaserTabs = document.querySelectorAll('.teaser-tab-btn');
-    const teaserIframe = document.getElementById('teaserIframe');
-    
-    teaserTabs.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (!siteData || !siteData.links) return;
-            
-            teaserTabs.forEach(t => t.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const platform = btn.getAttribute('data-platform');
-            if (platform === 'spotify') {
-                teaserIframe.src = siteData.links.teaserSpotify;
-            } else if (platform === 'deezer') {
-                teaserIframe.src = siteData.links.teaserDeezer;
-            } else if (platform === 'youtube') {
-                teaserIframe.src = siteData.links.teaserYoutube;
-            }
-        });
-    });
+
 
     // 4. Fetch dynamic data from data.json
     fetch('data.json')
@@ -302,23 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
             contactFooterBtn.href = `mailto:${links.contactEmail}`;
         }
 
-        // Teaser Player Embeds and profiles
-        const teaserIframe = document.getElementById('teaserIframe');
-        const profileSpotifyBtn = document.getElementById('profileSpotifyBtn');
-        const profileDeezerBtn = document.getElementById('profileDeezerBtn');
-        const profileYoutubeBtn = document.getElementById('profileYoutubeBtn');
-        
-        if (teaserIframe && links.teaserSpotify) {
-            teaserIframe.src = links.teaserSpotify;
-        }
-        if (profileSpotifyBtn && links.profileSpotify) {
-            profileSpotifyBtn.href = links.profileSpotify;
-        }
-        if (profileDeezerBtn && links.profileDeezer) {
-            profileDeezerBtn.href = links.profileDeezer;
-        }
-        if (profileYoutubeBtn && links.profileYoutube) {
-            profileYoutubeBtn.href = links.profileYoutube;
-        }
+
     }
 });
