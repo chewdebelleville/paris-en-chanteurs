@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balade 7 : Pigalle & Clichy de Serge Gainsbourg — Paris en chanteurs</title>
-    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Pigalle & Clichy de Serge Gainsbourg de Paris en chanteurs.">
+    <title>Balade 3 : Boris Vian — Paris en chanteurs</title>
+    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Boris Vian de Paris en chanteurs.">
     
     <!-- Mobile-first high performance inline CSS -->
     <style>
@@ -23,6 +23,14 @@
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+        @font-face {
+            font-family: 'Raghero';
+            src: url('../sources/Raghero-regular.otf') format('opentype'),
+                 url('/sources/Raghero-regular.otf') format('opentype');
+            font-style: normal;
+            font-weight: normal;
+        }
 
         *, *::before, *::after {
             box-sizing: border-box;
@@ -82,19 +90,10 @@
             color: var(--color-primary-dark);
         }
 
-        .walk-badge {
-            display: inline-block;
-            background-color: var(--color-primary-light);
-            color: var(--color-primary-dark);
-            font-weight: 700;
-            font-size: 0.8rem;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-        }
-
-        .title {
-            font-family: var(--font-serif);
+        #walkTitle {
+            font-family: 'Raghero', var(--font-serif);
+            font-style: normal;
+            text-transform: uppercase;
             font-size: 1.8rem;
             color: var(--color-primary-dark);
             line-height: 1.2;
@@ -147,24 +146,37 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        .playlist-btn:hover {
+            transform: scale(1.03);
+            color: var(--color-white) !important;
+        }
+
         .playlist-btn:active {
             transform: scale(0.98);
         }
 
+        .btn-deezer {
+            background-color: #A238FF;
+        }
+        .btn-deezer:hover {
+            background-color: #8c2ee0;
+        }
         .btn-spotify {
             background-color: #1DB954;
         }
-        .btn-deezer {
-            background-color: #A238FF;
+        .btn-spotify:hover {
+            background-color: #1aa34a;
         }
         .btn-youtube {
             background-color: #FF0000;
         }
+        .btn-youtube:hover {
+            background-color: #e60000;
+        }
 
-        .playlist-btn svg {
+        .playlist-btn img {
             width: 24px;
             height: 24px;
-            fill: currentColor;
         }
 
         .footer {
@@ -191,36 +203,35 @@
         </div>
 
         <div style="text-align: center;">
-            <span class="walk-badge">Itinéraire N° 7</span>
-            <h1 class="title" id="walkTitle">Pigalle & Clichy de Serge Gainsbourg</h1>
-            <p class="subtitle" id="walkSubtitle">Du Poinçonneur aux nuits d'encre</p>
+            <h1 class="title" id="walkTitle">Boris Vian</h1>
+            <p class="subtitle" id="walkSubtitle">De Maurice Chevalier à Piaf</p>
         </div>
 
         <div class="meta">
             <div class="meta-item">
                 <span>⏱</span>
-                <span id="walkDuration">2h00</span>
+                <span id="walkDuration">1h30</span>
             </div>
             <div class="meta-item">
                 <span>📍</span>
-                <span id="walkDistance">3.3 km</span>
+                <span id="walkDistance">2.5 km</span>
             </div>
         </div>
 
         <div class="playlist-buttons">
-            <a href="https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
-                <span>Écouter sur Spotify</span>
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.982-.336.075-.668-.135-.745-.47-.077-.337.135-.668.47-.745 3.856-.88 7.15-.502 9.82.13.297.08.388.463.208.76zm1.223-2.72c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.182-.413.125-.845-.107-.97-.52-.125-.413.107-.845.52-.97 3.668-1.112 8.237-.577 11.34 1.33.367.227.487.708.26 1.075zm.106-2.842C14.484 8.788 8.755 8.6 5.43 9.61c-.51.155-1.047-.137-1.202-.647-.155-.51.137-1.046.647-1.202 3.82-1.16 10.13-.95 14.28 1.514.46.273.61.87.337 1.33-.273.46-.87.61-1.33.337z"/></svg>
-            </a>
-            
             <a href="https://www.deezer.com/fr/playlist/123456789" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
                 <span>Écouter sur Deezer</span>
-                <svg viewBox="0 0 24 24"><path d="M2 17.5h3.6v3H2v-3zm0-5.5h3.6v3H2v-3zm0-5.5h3.6v3H2v-3zM7.4 17.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm5.4 16.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm5.4 11H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3z"/></svg>
+                <img src="/sources/deezer-logo.svg" alt="Deezer Logo">
+            </a>
+            
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
+                <span>Écouter sur Spotify</span>
+                <img src="/sources/spotify-logo.svg" alt="Spotify Logo">
             </a>
             
             <a href="https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
                 <span>Écouter sur YouTube Music</span>
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                <img src="/sources/youtube-music-logo.svg" alt="YouTube Music Logo">
             </a>
         </div>
     </div>
@@ -231,7 +242,7 @@
 
     <!-- Client-side script to fetch latest updates from data.json -->
     <script>
-        const WALK_KEY = "balade7";
+        const WALK_KEY = "vian";
         
         // Fetch data.json to keep playlists dynamically synchronized
         fetch('../data.json')

@@ -21,6 +21,7 @@
   max-width: 450px;
   box-shadow: var(--shadow-lg);
   text-align: center;
+  margin: 0 auto;
 }
 
 .login-icon {

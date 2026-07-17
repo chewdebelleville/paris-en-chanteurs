@@ -143,18 +143,18 @@
             
             <div class="teaser-player-container">
                 <div class="teaser-tabs">
-                    <button class="teaser-tab-btn active" data-platform="spotify">Spotify</button>
-                    <button class="teaser-tab-btn" data-platform="deezer">Deezer</button>
+                    <button class="teaser-tab-btn active" data-platform="deezer">Deezer</button>
+                    <button class="teaser-tab-btn" data-platform="spotify">Spotify</button>
                     <button class="teaser-tab-btn" data-platform="youtube">YouTube</button>
                 </div>
                 <div class="teaser-frame-wrapper">
-                    <!-- Initial loaded frame (Spotify) -->
-                    <iframe id="teaserIframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdgn7jofZ3pG?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <!-- Initial loaded frame (Deezer) -->
+                    <iframe id="teaserIframe" src="https://widget.deezer.com/widget/dark/playlist/3110260442" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <div class="teaser-profile-links">
                     <span>Suivre notre compte officiel :</span>
-                    <a href="#" target="_blank" rel="noopener" id="profileSpotifyBtn" class="profile-link-btn">Spotify</a>
                     <a href="#" target="_blank" rel="noopener" id="profileDeezerBtn" class="profile-link-btn">Deezer</a>
+                    <a href="#" target="_blank" rel="noopener" id="profileSpotifyBtn" class="profile-link-btn">Spotify</a>
                     <a href="#" target="_blank" rel="noopener" id="profileYoutubeBtn" class="profile-link-btn">YouTube</a>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                 Séances de dédicaces, rencontres en librairie, conférences ou visites guidées : ne manquez aucun événement autour de la sortie du livre.
             </p>
             
-            <div class="agenda-timeline" id="agendaTimeline">
+            <div class="agenda-grid" id="agendaTimeline">
                 <!-- Dynamically loaded events go here -->
                 <div style="text-align: center; padding: 40px; color: var(--color-text-muted);">
                     Chargement de l'agenda...
@@ -258,37 +258,8 @@
         </div>
     </section>
 
-    <!-- Section 5: Contact & Footer Action Box -->
-    <section id="contact" class="contact-section">
-        <div class="container contact-container">
-            <div class="contact-card">
-                <div class="contact-icon">✉</div>
-                <h3>Nous Contacter</h3>
-                <p style="margin-bottom: 20px;">Olivier se fera un plaisir de répondre à vos demandes. Sélectionnez le sujet de votre message ci-dessous :</p>
-                
-                <div class="contact-buttons-grid">
-                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Proposition%20de%20d%C3%A9dicace" class="contact-link-card" id="contactDedicaceLink">
-                        <span>✍️ Proposer des dates de dédicaces</span>
-                        <span>➔</span>
-                    </a>
-                    
-                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Demande%20d'extrait%20de%20balade" class="contact-link-card" id="contactExtraitLink">
-                        <span>📖 Demander un extrait ou une balade inédite</span>
-                        <span>➔</span>
-                    </a>
-                    
-                    <a href="mailto:contact@paris-en-chanteurs.fr?subject=Paris%20en%20chanteurs%20-%20Balade%20physique%20avec%20Olivier" class="contact-link-card" id="contactWalkLink">
-                        <span>🚶 Proposer une date de balade avec Olivier</span>
-                        <span>➔</span>
-                    </a>
-                </div>
-                
-                <p style="margin-top: 30px; font-size: 0.9rem; color: var(--color-text-muted);">
-                    Ou écrivez directement à : <a href="mailto:contact@paris-en-chanteurs.fr" id="contactBtn" style="font-weight: 700;">contact@paris-en-chanteurs.fr</a>
-                </p>
-            </div>
-        </div>
-    </section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -304,6 +275,8 @@
                         <li><a href="#concept">Le guide</a></li>
                         <li><a href="#playlists">Les Playlists</a></li>
                         <li><a href="#auteur">L'Auteur</a></li>
+                        <li><a href="#presse">Revue de presse</a></li>
+                        <li id="footerNavLinkAgenda" class="d-none"><a href="#agenda">Agenda</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">

@@ -1,9 +1,9 @@
 {
   "playlists": {
-    "balade1": {
-      "id": "balade1",
+    "chanson-realiste": {
+      "id": "chanson-realiste",
       "number": 1,
-      "title": "La butte Montmartre d'Édith Piaf",
+      "title": "Montmartre et la chanson réaliste",
       "subtitle": "La Môme de la Rue Saint-Vincent",
       "description": "Retracez les premiers pas de la Môme Piaf, des cours d'immeubles de la rue de Belleville aux escaliers mythiques de la butte Montmartre, là où elle chanta dans la rue pour survivre.",
       "duration": "1h45",
@@ -14,10 +14,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade2": {
-      "id": "balade2",
+    "brassens": {
+      "id": "brassens",
       "number": 2,
-      "title": "Saint-Germain-des-Prés de Juliette Gréco",
+      "title": "Georges Brassens",
       "subtitle": "La Muse de l'Existentialisme",
       "description": "Plongez dans l'effervescence d'après-guerre. Suivez Juliette Gréco, Boris Vian et Jean-Paul Sartre dans les caves de jazz du Tabou et les cafés littéraires mythiques du boulevard Saint-Germain.",
       "duration": "2h00",
@@ -28,10 +28,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade3": {
-      "id": "balade3",
+    "vian": {
+      "id": "vian",
       "number": 3,
-      "title": "Belleville & Ménilmontant populaires",
+      "title": "Boris Vian",
       "subtitle": "De Maurice Chevalier à Piaf",
       "description": "Explorez les collines populaires de l'Est parisien. Écoutez le Paris canaille de Maurice Chevalier et les premiers cris d'Édith Piaf sous les réverbères de la rue de Belleville.",
       "duration": "1h30",
@@ -42,10 +42,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade4": {
-      "id": "balade4",
+    "rive-gauche": {
+      "id": "rive-gauche",
       "number": 4,
-      "title": "Le Marais intime de Barbara",
+      "title": "Cabarets Rive gauche",
       "subtitle": "La Dame en Noir des Cabarets",
       "description": "Marchez sur les pas de Barbara. Retrouvez l'ambiance feutrée des cabarets oubliés de la rive droite et le square de la rue des Rosiers où résonnent encore ses mélodies poignantes.",
       "duration": "1h50",
@@ -56,10 +56,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade5": {
-      "id": "balade5",
+    "aznavour": {
+      "id": "aznavour",
       "number": 5,
-      "title": "Le Quartier Latin de Georges Brassens",
+      "title": "Charles Aznavour",
       "subtitle": "L'esprit frondeur des bancs publics",
       "description": "L'esprit libertaire et poétique du poète sétois. Des bancs publics du jardin du Luxembourg aux impasses estudiantines où Brassens grattait sa guitare avec ses copains d'abord.",
       "duration": "2h15",
@@ -70,10 +70,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade6": {
-      "id": "balade6",
+    "gainsbourg": {
+      "id": "gainsbourg",
       "number": 6,
-      "title": "Les Grands Boulevards d'Yves Montand",
+      "title": "Serge Gainsbourg",
       "subtitle": "Flânerie parisienne et music-hall",
       "description": "Redécouvrez le Paris lumineux du music-hall et du cinéma. Suivez le rythme effréné d'Yves Montand le long des théâtres, passages couverts et grands cinémas du boulevard de Bonne-Nouvelle.",
       "duration": "1h40",
@@ -84,10 +84,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade7": {
-      "id": "balade7",
+    "barbara": {
+      "id": "barbara",
       "number": 7,
-      "title": "Pigalle & Clichy de Serge Gainsbourg",
+      "title": "Barbara",
       "subtitle": "Du Poinçonneur aux nuits d'encre",
       "description": "L'univers nocturne, sulfureux et poétique de l'homme à la tête de chou. De la station des Lilas aux cabarets de Pigalle, terminez devant sa célèbre façade taguée de la rue de Verneuil.",
       "duration": "2h00",
@@ -98,10 +98,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade8": {
-      "id": "balade8",
+    "hardy-dutronc": {
+      "id": "hardy-dutronc",
       "number": 8,
-      "title": "L'Île de la Cité de Charles Aznavour",
+      "title": "Françoise Hardy et Jacques Dutronc",
       "subtitle": "La bohème au fil de la Seine",
       "description": "Laissez-vous guider sur les ponts et quais de Seine célébrés par Aznavour. De la place Dauphine aux bouquinistes du quai de Montebello, revivez les heures nostalgiques d'un Paris éternel.",
       "duration": "1h30",
@@ -112,10 +112,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade9": {
-      "id": "balade9",
+    "renaud": {
+      "id": "renaud",
       "number": 9,
-      "title": "Le Canal Saint-Martin de Renaud",
+      "title": "Renaud",
       "subtitle": "L'argot des écluses et des faubourgs",
       "description": "Gérard Lambert, la Dèche et le bistro du coin. Suivez les pas de Renaud Séchan le long des écluses de fer et de pierre du canal Saint-Martin, sous les platanes chers aux titis parisiens.",
       "duration": "1h45",
@@ -126,10 +126,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade10": {
-      "id": "balade10",
+    "cim-montmartre": {
+      "id": "cim-montmartre",
       "number": 10,
-      "title": "Montparnasse de Jacques Brel",
+      "title": "Cimetière Montmartre",
       "subtitle": "Les poètes de la Rive Gauche",
       "description": "Le Montparnasse artistique et musical de Jacques Brel. Du cabaret L'Écluse au cimetière où il repose en pensée à côté de Baudelaire, ressentez l'intensité dramatique du Grand Jacques.",
       "duration": "2h10",
@@ -140,10 +140,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade11": {
-      "id": "balade11",
+    "montparnasse": {
+      "id": "montparnasse",
       "number": 11,
-      "title": "La Bastille d'Aristide Bruant",
+      "title": "Cimetière Montparnasse",
       "subtitle": "Dans la rue et les faubourgs",
       "description": "Découvrez le Paris ouvrier et frondeur chanté par Aristide Bruant. Du Faubourg Saint-Antoine aux ruelles pavées de la Roquette, marchez au rythme de l'accordéon et des complaintes de la rue.",
       "duration": "1h50",
@@ -154,10 +154,10 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "balade12": {
-      "id": "balade12",
+    "perelachaise": {
+      "id": "perelachaise",
       "number": 12,
-      "title": "Passy & Auteuil de Léo Ferré",
+      "title": "Cimetière du Père-Lachaise",
       "subtitle": "Les mélodies mélancoliques de la Seine",
       "description": "Le Paris chic et brumeux de Léo Ferré. Une promenade poétique et romantique des collines de Passy à la Seine, au son des mélodies d'Aragon et de Verlaine mises en musique.",
       "duration": "2h00",

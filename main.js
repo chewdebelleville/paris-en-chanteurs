@@ -113,12 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Dynamic hiding for Agenda
             const navLinkAgenda = document.getElementById('navLinkAgenda');
+            const footerNavLinkAgenda = document.getElementById('footerNavLinkAgenda');
             const sectionAgenda = document.getElementById('agenda');
             if (!data.agenda || data.agenda.length === 0) {
                 if (navLinkAgenda) navLinkAgenda.classList.add('d-none');
+                if (footerNavLinkAgenda) footerNavLinkAgenda.classList.add('d-none');
                 if (sectionAgenda) sectionAgenda.classList.add('d-none');
             } else {
                 if (navLinkAgenda) navLinkAgenda.classList.remove('d-none');
+                if (footerNavLinkAgenda) footerNavLinkAgenda.classList.remove('d-none');
                 if (sectionAgenda) sectionAgenda.classList.remove('d-none');
                 renderAgenda(data.agenda);
             }
@@ -147,11 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
 
-    // SVG icons for streaming platforms
+    // Image sources for streaming platforms
     const icons = {
-        spotify: `<svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.982-.336.075-.668-.135-.745-.47-.077-.337.135-.668.47-.745 3.856-.88 7.15-.502 9.82.13.297.08.388.463.208.76zm1.223-2.72c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.182-.413.125-.845-.107-.97-.52-.125-.413.107-.845.52-.97 3.668-1.112 8.237-.577 11.34 1.33.367.227.487.708.26 1.075zm.106-2.842C14.484 8.788 8.755 8.6 5.43 9.61c-.51.155-1.047-.137-1.202-.647-.155-.51.137-1.046.647-1.202 3.82-1.16 10.13-.95 14.28 1.514.46.273.61.87.337 1.33-.273.46-.87.61-1.33.337z"/></svg>`,
-        deezer: `<svg viewBox="0 0 24 24"><path d="M2 17.5h3.6v3H2v-3zm0-5.5h3.6v3H2v-3zm0-5.5h3.6v3H2v-3zM7.4 17.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm0-5.5H11v3H7.4v-3zm5.4 16.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm0-5.5H16.4v3h-3.6v-3zm5.4 11H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3zm0-5.5H21.8v3h-3.6v-3z"/></svg>`,
-        youtube: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>`
+        deezer: `<img src="sources/deezer-logo.svg" alt="Deezer" style="width: 24px; height: 24px;">`,
+        spotify: `<img src="sources/spotify-logo.svg" alt="Spotify" style="width: 24px; height: 24px;">`,
+        youtube: `<img src="sources/youtube-music-logo.svg" alt="YouTube Music" style="width: 24px; height: 24px;">`
     };
 
     // Render walks in grid
@@ -159,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!playlistsGrid) return;
         playlistsGrid.innerHTML = '';
         
-        // Loop over the keys (balade1, balade2, etc.)
+        // Loop over the playlist keys
         Object.keys(playlists).forEach(key => {
             const walk = playlists[key];
             const card = document.createElement('article');
@@ -168,10 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             card.innerHTML = `
                 <div>
-                    <span class="walk-card-badge">N° ${walk.number}</span>
-                    <span class="walk-number">Balade ${walk.number}</span>
                     <h3 class="walk-title">${walk.title}</h3>
-                    <p class="walk-subtitle">${walk.subtitle}</p>
                     
                     <div class="walk-meta">
                         <div class="walk-meta-item">
@@ -184,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     
-                    <p class="walk-description">${walk.description}</p>
                     <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 15px;">
                         <strong>Départ :</strong> ${walk.startPoint} <br>
                         <strong>Arrivée :</strong> ${walk.endPoint}
@@ -192,13 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 
                 <div class="playlist-buttons">
-                    <a href="${walk.spotify}" target="_blank" rel="noopener" class="playlist-btn btn-spotify" aria-label="Écouter sur Spotify">
-                        <span>Écouter sur Spotify</span>
-                        ${icons.spotify}
-                    </a>
                     <a href="${walk.deezer}" target="_blank" rel="noopener" class="playlist-btn btn-deezer" aria-label="Écouter sur Deezer">
                         <span>Écouter sur Deezer</span>
                         ${icons.deezer}
+                    </a>
+                    <a href="${walk.spotify}" target="_blank" rel="noopener" class="playlist-btn btn-spotify" aria-label="Écouter sur Spotify">
+                        <span>Écouter sur Spotify</span>
+                        ${icons.spotify}
                     </a>
                     <a href="${walk.youtube}" target="_blank" rel="noopener" class="playlist-btn btn-youtube" aria-label="Écouter sur YouTube Music">
                         <span>Écouter sur YouTube Music</span>
@@ -232,22 +231,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sortedEvents.forEach(event => {
             const item = document.createElement('div');
-            item.className = 'agenda-item';
+            item.className = 'agenda-card';
             
             const dateObj = new Date(event.date);
             const formattedDate = isNaN(dateObj.getTime()) ? event.date : dateFormatter.format(dateObj);
             
             item.innerHTML = `
-                <div class="agenda-date-box">
-                    <span class="agenda-date">${formattedDate} — ${event.time}</span>
+                <div class="agenda-card-header">
                     <span class="agenda-type">${event.type}</span>
+                    <span class="agenda-date">${formattedDate}</span>
                 </div>
-                <div class="agenda-content">
+                <div class="agenda-card-body" style="display: flex; flex-direction: column; flex-grow: 1;">
                     <h3 class="agenda-title">${event.title}</h3>
-                    <div class="agenda-location">
-                        <span>📍</span> ${event.location}
+                    <div class="agenda-time-loc" style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 12px;">
+                        <span>🕒 ${event.time}</span>
+                        <span>📍 ${event.location}</span>
                     </div>
-                    <p class="agenda-description">${event.description}</p>
+                    <p class="agenda-description" style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 15px; flex-grow: 1;">${event.description}</p>
                     ${event.link ? `<a href="${event.link}" target="_blank" rel="noopener" class="agenda-link">En savoir plus ➔</a>` : ''}
                 </div>
             `;

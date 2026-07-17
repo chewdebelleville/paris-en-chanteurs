@@ -3,21 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Configuration Supabase
-    const SUPABASE_URL = window.localStorage.getItem('supabase_url') || 'https://your-project.supabase.co';
-    const SUPABASE_ANON_KEY = window.localStorage.getItem('supabase_anon_key') || 'your-anon-key';
-
-    let supabase = null;
-    try {
-        if (typeof window.supabase !== 'undefined') {
-            supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        } else if (typeof supabasejs !== 'undefined') {
-            supabase = supabasejs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        }
-    } catch (err) {
-        console.error("Erreur d'initialisation de Supabase client:", err);
-    }
-
+    const CORRECT_PASSWORD = 'paris2026';
     let siteData = null;
     let editingItemId = null; // Track if we are editing an event or press item
 
@@ -25,79 +11,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginScreen = document.getElementById('loginScreen');
     const adminDashboard = document.getElementById('adminDashboard');
     const loginForm = document.getElementById('loginForm');
-    const adminEmail = document.getElementById('adminEmail');
     const adminPassword = document.getElementById('adminPassword');
     const loginError = document.getElementById('loginError');
     const logoutBtn = document.getElementById('logoutBtn');
 
-    // Supabase Auth listener or session fallback
-    if (supabase && SUPABASE_URL !== 'https://your-project.supabase.co') {
-        supabase.auth.onAuthStateChange((event, session) => {
-            if (session) {
-                showDashboard();
-            } else {
-                showLogin();
-            }
-        });
+    // Local authentication check
+    if (sessionStorage.getItem('admin_auth') === 'true') {
+        showDashboard();
     } else {
-        if (sessionStorage.getItem('admin_auth') === 'true') {
-            showDashboard();
-        } else {
-            showLogin();
-        }
+        showLogin();
     }
 
     // Login Form Submit
-    loginForm.addEventListener('submit', async (e) => {
+    loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         loginError.style.display = 'none';
 
-        const email = adminEmail.value;
         const password = adminPassword.value;
 
-        if (supabase && SUPABASE_URL !== 'https://your-project.supabase.co') {
-            try {
-                const { data, error } = await supabase.auth.signInWithPassword({
-                    email: email,
-                    password: password
-                });
-                if (error) throw error;
-            } catch (err) {
-                console.error("Supabase Auth Error:", err);
-                loginError.textContent = "Erreur de connexion : " + (err.message || "Identifiants incorrects.");
-                loginError.style.display = 'block';
-                adminPassword.value = '';
-                adminPassword.focus();
-            }
+        if (password === CORRECT_PASSWORD) {
+            sessionStorage.setItem('admin_auth', 'true');
+            showDashboard();
         } else {
-            // Local offline/demo fallback
-            if ((email === 'admin@paris-en-chanteurs.fr' || email === 'admin@admin.com') && password === 'paris2026') {
-                sessionStorage.setItem('admin_auth', 'true');
-                showDashboard();
-            } else if (email === 'config' && password.includes('::')) {
-                const [url, key] = password.split('::');
-                window.localStorage.setItem('supabase_url', url.trim());
-                window.localStorage.setItem('supabase_anon_key', key.trim());
-                alert("Configuration Supabase enregistrée ! Rechargement...");
-                window.location.reload();
-            } else {
-                loginError.innerHTML = `Identifiants incorrects.<br><span style="font-size:0.8rem; font-weight:normal; opacity:0.8;">Astuce hors-ligne : Utilisez 'admin@admin.com' et 'paris2026' ou tapez 'config' en email et 'URL::ANON_KEY' en mot de passe pour enregistrer vos credentials Supabase.</span>`;
-                loginError.style.display = 'block';
-                adminPassword.value = '';
-                adminPassword.focus();
-            }
+            loginError.textContent = "Mot de passe incorrect.";
+            loginError.style.display = 'block';
+            adminPassword.value = '';
+            adminPassword.focus();
         }
     });
 
     // Logout click
     if (logoutBtn) {
-        logoutBtn.addEventListener('click', async () => {
-            if (supabase && SUPABASE_URL !== 'https://your-project.supabase.co') {
-                await supabase.auth.signOut();
-            } else {
-                sessionStorage.removeItem('admin_auth');
-                showLogin();
-            }
+        logoutBtn.addEventListener('click', () => {
+            sessionStorage.removeItem('admin_auth');
+            showLogin();
         });
     }
 
