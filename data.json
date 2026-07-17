@@ -10,9 +10,9 @@
       "distance": "2.8 km",
       "startPoint": "Métro Abbesses (Ligne 12)",
       "endPoint": "Place du Tertre",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/7kg5qa0iNbhehT5w58STgs?si=sQdu2ZwdQ9SAx3TG92MGkQ",
+      "deezer": "https://link.deezer.com/s/33R9sec6uJmKzsj6upvMi",
+      "youtube": "https://music.youtube.com/playlist?list=PLYI5cdIGnKAg&si=oUuqk3aeuw7E2rkb"
     },
     "brassens": {
       "id": "brassens",
@@ -24,9 +24,9 @@
       "distance": "3.2 km",
       "startPoint": "Métro Saint-Germain-des-Prés (Ligne 4)",
       "endPoint": "Place Saint-Sulpice",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/1Lcv9yDWutH6jWLw6sORtQ?si=fJCqBwNTRKG-0xDvdCuJ_g",
+      "deezer": "https://link.deezer.com/s/33Rf2wykmErIufE0Vhk0G",
+      "youtube": "https://music.youtube.com/playlist?list=PLNYlvhV26YM0&si=QmU8JJCLxP-7fvO6"
     },
     "vian": {
       "id": "vian",
@@ -38,8 +38,8 @@
       "distance": "2.5 km",
       "startPoint": "Métro Belleville (Ligne 2, 11)",
       "endPoint": "Parc de Ménilmontant",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
+      "spotify": "https://open.spotify.com/playlist/4gyLo7Y28Ck4S6jVM5prxC?si=Vlb5kjkeRGmm09LsxBeZbQ",
+      "deezer": "https://link.deezer.com/s/33Rf5yIaaDGfGKCT0o6PO",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
     "rive-gauche": {
@@ -54,7 +54,7 @@
       "endPoint": "Place des Vosges",
       "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "youtube": "https://music.youtube.com/playlist?list=PLInGoYMn0If4&si=ChKJugww0T2NiY16"
     },
     "aznavour": {
       "id": "aznavour",
@@ -66,9 +66,9 @@
       "distance": "3.5 km",
       "startPoint": "RER Luxembourg (Ligne B)",
       "endPoint": "Place de la Contrescarpe",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/0FV2WErdZ0Khzn3UEpzhR3?si=Yg5jVd9uSPSuH_M_95Ke0w",
+      "deezer": "https://link.deezer.com/s/33Rf8cIHu1dTr4bRGuOwJ",
+      "youtube": "https://music.youtube.com/playlist?list=PLX0aIzTGc64Q&si=2rK2A_5Kz7YxpXR9"
     },
     "gainsbourg": {
       "id": "gainsbourg",
@@ -80,9 +80,9 @@
       "distance": "2.9 km",
       "startPoint": "Métro Richelieu-Drouot (Ligne 8, 9)",
       "endPoint": "Place de la République",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/0Wta47U6fRaa2KNYzt7ZkG?si=LqITZkdeTPmrQvNgBZjDWg",
+      "deezer": "https://link.deezer.com/s/33RfaaDHoqplBnwGlNO80",
+      "youtube": "https://music.youtube.com/playlist?list=PLRYTB38glSyQ&si=GO4dsU9yw5CePONs"
     },
     "barbara": {
       "id": "barbara",
@@ -94,9 +94,9 @@
       "distance": "3.3 km",
       "startPoint": "Métro Pigalle (Ligne 2, 12)",
       "endPoint": "Métro Blanche (Ligne 2)",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/1mMQFr6wtwiwhcsz8JD1lu?si=OkOyV4QJTL6fU8mnzTQquQ",
+      "deezer": "https://link.deezer.com/s/33Rfd1k1HsSBxDsJaKcOI",
+      "youtube": "https://music.youtube.com/playlist?list=PLBX5H2k0ltCc&si=Ufk2g8g2jLk4HaJz"
     },
     "hardy-dutronc": {
       "id": "hardy-dutronc",
@@ -108,9 +108,9 @@
       "distance": "2.4 km",
       "startPoint": "Métro Pont-Neuf (Ligne 7)",
       "endPoint": "Métro Saint-Michel (Ligne 4, RER C)",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/3NEUaXtmAyvn5nLJwoLfZG?si=RR50Q7NxQy6C2gUKgkqjLQ",
+      "deezer": "https://link.deezer.com/s/33RfeSjeG5Fnzr6HeRZiV",
+      "youtube": "https://music.youtube.com/playlist?list=PLYGMidRGHxgs&si=TywKcqukAm4nxWj3"
     },
     "renaud": {
       "id": "renaud",
@@ -122,9 +122,9 @@
       "distance": "2.8 km",
       "startPoint": "Métro Jacques Bonsergent (Ligne 5)",
       "endPoint": "Bassin de la Villette",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/6xBOruUTX84jXMUzMdHRfl?si=VMgDWATLRMiUnFbibULQiA",
+      "deezer": "https://link.deezer.com/s/33Rfhr1QPsO1U2rMRIbL5",
+      "youtube": "https://music.youtube.com/playlist?list=PLdr6rtuneYU8&si=7IlP4mKu7cGuk8PQ"
     },
     "cim-montmartre": {
       "id": "cim-montmartre",
@@ -136,9 +136,9 @@
       "distance": "3.1 km",
       "startPoint": "Métro Vavin (Ligne 4)",
       "endPoint": "Cimetière du Montparnasse",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/2qZRJZBFqzjk8r0d6uxcNC?si=eDf1pFOiRoCbGvaYDFvJ8Q",
+      "deezer": "https://link.deezer.com/s/33Rfk33F0Dr1oJMnrOgXW",
+      "youtube": "https://music.youtube.com/playlist?list=PLO_sOubE8h9k&si=mTOIXTM7Orep7pCA"
     },
     "montparnasse": {
       "id": "montparnasse",
@@ -150,9 +150,9 @@
       "distance": "3.0 km",
       "startPoint": "Métro Bastille (Ligne 1, 5, 8)",
       "endPoint": "Métro Charonne (Ligne 9)",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/4fnaHUf4dE7UhekYXfFnSQ?si=3mO0gKl_QJiW4z0uiOT1YA",
+      "deezer": "https://link.deezer.com/s/33Rfm2z1bTp0nIcgOOtvg",
+      "youtube": "https://music.youtube.com/playlist?list=PLCrlyJ67TzQE&si=7ZEaSIr6NhKyjD2u"
     },
     "perelachaise": {
       "id": "perelachaise",
@@ -164,9 +164,9 @@
       "distance": "3.4 km",
       "startPoint": "Métro Passy (Ligne 6)",
       "endPoint": "Pont de Grenelle",
-      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG",
-      "deezer": "https://www.deezer.com/fr/playlist/123456789",
-      "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
+      "spotify": "https://open.spotify.com/playlist/35fjY52QQEOBWZBHNoZWd7?si=H2rISztnSEyaOdL3bsY57Q",
+      "deezer": "https://link.deezer.com/s/33RfooMb5opspRl7B7JIk",
+      "youtube": "https://music.youtube.com/playlist?list=PLdV29Iuhtir4&si=APmm1-vlNHuRqOI0"
     }
   },
   "agenda": [
