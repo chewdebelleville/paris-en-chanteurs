@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             card.innerHTML = `
                 <div>
-                    <h3 class="walk-title">${walk.title}</h3>
+                    <h3 class="walk-title"><a href="promenades/${key}/" style="color: inherit; text-decoration: none;">${walk.title}</a></h3>
                     
                     <div class="walk-meta">
                         <div class="walk-meta-item">

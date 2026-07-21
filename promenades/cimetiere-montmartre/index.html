@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balade 12 : Cimetière du Père-Lachaise — Paris en chanteurs</title>
-    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Cimetière du Père-Lachaise de Paris en chanteurs.">
+    <title>Balade 10 : Cimetière Montmartre — Paris en chanteurs</title>
+    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Cimetière Montmartre de Paris en chanteurs.">
     
     <!-- Mobile-first high performance inline CSS -->
     <style>
@@ -26,7 +26,7 @@
 
         @font-face {
             font-family: 'Raghero';
-            src: url('../sources/Raghero-regular.otf') format('opentype'),
+            src: url('../../sources/Raghero-regular.otf') format('opentype'),
                  url('/sources/Raghero-regular.otf') format('opentype');
             font-style: normal;
             font-weight: normal;
@@ -203,33 +203,33 @@
         </div>
 
         <div style="text-align: center;">
-            <h1 class="title" id="walkTitle">Cimetière du Père-Lachaise</h1>
-            <p class="subtitle" id="walkSubtitle">Les mélodies mélancoliques de la Seine</p>
+            <h1 class="title" id="walkTitle">Cimetière Montmartre</h1>
+            <p class="subtitle" id="walkSubtitle">Les poètes de la Rive Gauche</p>
         </div>
 
         <div class="meta">
             <div class="meta-item">
                 <span>⏱</span>
-                <span id="walkDuration">2h00</span>
+                <span id="walkDuration">2h10</span>
             </div>
             <div class="meta-item">
                 <span>📍</span>
-                <span id="walkDistance">3.4 km</span>
+                <span id="walkDistance">3.1 km</span>
             </div>
         </div>
 
         <div class="playlist-buttons">
-            <a href="https://www.deezer.com/fr/playlist/123456789" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
+            <a href="https://link.deezer.com/s/33Rfk33F0Dr1oJMnrOgXW" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
                 <span>Écouter sur Deezer</span>
                 <img src="/sources/deezer-logo.svg" alt="Deezer Logo">
             </a>
             
-            <a href="https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
+            <a href="https://open.spotify.com/playlist/2qZRJZBFqzjk8r0d6uxcNC?si=eDf1pFOiRoCbGvaYDFvJ8Q" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
                 <span>Écouter sur Spotify</span>
                 <img src="/sources/spotify-logo.svg" alt="Spotify Logo">
             </a>
             
-            <a href="https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
+            <a href="https://music.youtube.com/playlist?list=PLO_sOubE8h9k&si=mTOIXTM7Orep7pCA" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
                 <span>Écouter sur YouTube Music</span>
                 <img src="/sources/youtube-music-logo.svg" alt="YouTube Music Logo">
             </a>
@@ -237,15 +237,15 @@
     </div>
 
     <div class="footer">
-        <a href="../index.html" class="footer-link">Visiter le site complet</a>
+        <a href="../../index.html" class="footer-link">Visiter le site complet</a>
     </div>
 
     <!-- Client-side script to fetch latest updates from data.json -->
     <script>
-        const WALK_KEY = "perelachaise";
+        const WALK_KEY = "cimetiere-montmartre";
         
         // Fetch data.json to keep playlists dynamically synchronized
-        fetch('../data.json')
+        fetch('../../data.json')
             .then(res => {
                 if (!res.ok) throw new Error("JSON fetch failed");
                 return res.json();

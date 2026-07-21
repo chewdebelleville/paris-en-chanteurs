@@ -44,7 +44,7 @@ function generateWalkHtml(key, walk) {
 
         @font-face {
             font-family: 'Raghero';
-            src: url('../sources/Raghero-regular.otf') format('opentype'),
+            src: url('../../sources/Raghero-regular.otf') format('opentype'),
                  url('/sources/Raghero-regular.otf') format('opentype');
             font-style: normal;
             font-weight: normal;
@@ -255,7 +255,7 @@ function generateWalkHtml(key, walk) {
     </div>
 
     <div class="footer">
-        <a href="../index.html" class="footer-link">Visiter le site complet</a>
+        <a href="../../index.html" class="footer-link">Visiter le site complet</a>
     </div>
 
     <!-- Client-side script to fetch latest updates from data.json -->
@@ -263,7 +263,7 @@ function generateWalkHtml(key, walk) {
         const WALK_KEY = "${key}";
         
         // Fetch data.json to keep playlists dynamically synchronized
-        fetch('../data.json')
+        fetch('../../data.json')
             .then(res => {
                 if (!res.ok) throw new Error("JSON fetch failed");
                 return res.json();
@@ -292,18 +292,18 @@ function generateWalkHtml(key, walk) {
 // Generate the 12 pages
 Object.keys(playlists).forEach(key => {
     const walk = playlists[key];
-    const folderPath = path.join(__dirname, key);
+    const folderPath = path.join(__dirname, 'promenades', key);
     
     // Create folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
-        console.log(`Dossier créé: ${key}`);
+        console.log(`Dossier créé: promenades/${key}`);
     }
     
     // Write index.html inside the folder
     const fileHtml = generateWalkHtml(key, walk);
     fs.writeFileSync(path.join(folderPath, 'index.html'), fileHtml, 'utf8');
-    console.log(`Page générée: ${key}/index.html`);
+    console.log(`Page générée: promenades/${key}/index.html`);
 });
 
 console.log("Génération terminée avec succès !");

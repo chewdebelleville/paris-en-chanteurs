@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balade 6 : Serge Gainsbourg — Paris en chanteurs</title>
-    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Serge Gainsbourg de Paris en chanteurs.">
+    <title>Balade 3 : Boris Vian — Paris en chanteurs</title>
+    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Boris Vian de Paris en chanteurs.">
     
     <!-- Mobile-first high performance inline CSS -->
     <style>
@@ -26,7 +26,7 @@
 
         @font-face {
             font-family: 'Raghero';
-            src: url('../sources/Raghero-regular.otf') format('opentype'),
+            src: url('../../sources/Raghero-regular.otf') format('opentype'),
                  url('/sources/Raghero-regular.otf') format('opentype');
             font-style: normal;
             font-weight: normal;
@@ -203,28 +203,28 @@
         </div>
 
         <div style="text-align: center;">
-            <h1 class="title" id="walkTitle">Serge Gainsbourg</h1>
-            <p class="subtitle" id="walkSubtitle">Flânerie parisienne et music-hall</p>
+            <h1 class="title" id="walkTitle">Boris Vian</h1>
+            <p class="subtitle" id="walkSubtitle">De Maurice Chevalier à Piaf</p>
         </div>
 
         <div class="meta">
             <div class="meta-item">
                 <span>⏱</span>
-                <span id="walkDuration">1h40</span>
+                <span id="walkDuration">1h30</span>
             </div>
             <div class="meta-item">
                 <span>📍</span>
-                <span id="walkDistance">2.9 km</span>
+                <span id="walkDistance">2.5 km</span>
             </div>
         </div>
 
         <div class="playlist-buttons">
-            <a href="https://www.deezer.com/fr/playlist/123456789" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
+            <a href="https://link.deezer.com/s/33Rf5yIaaDGfGKCT0o6PO" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
                 <span>Écouter sur Deezer</span>
                 <img src="/sources/deezer-logo.svg" alt="Deezer Logo">
             </a>
             
-            <a href="https://open.spotify.com/playlist/37i9dQZF1DXdgn7jofZ3pG" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
+            <a href="https://open.spotify.com/playlist/4gyLo7Y28Ck4S6jVM5prxC?si=Vlb5kjkeRGmm09LsxBeZbQ" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
                 <span>Écouter sur Spotify</span>
                 <img src="/sources/spotify-logo.svg" alt="Spotify Logo">
             </a>
@@ -237,15 +237,15 @@
     </div>
 
     <div class="footer">
-        <a href="../index.html" class="footer-link">Visiter le site complet</a>
+        <a href="../../index.html" class="footer-link">Visiter le site complet</a>
     </div>
 
     <!-- Client-side script to fetch latest updates from data.json -->
     <script>
-        const WALK_KEY = "gainsbourg";
+        const WALK_KEY = "boris-vian";
         
         // Fetch data.json to keep playlists dynamically synchronized
-        fetch('../data.json')
+        fetch('../../data.json')
             .then(res => {
                 if (!res.ok) throw new Error("JSON fetch failed");
                 return res.json();

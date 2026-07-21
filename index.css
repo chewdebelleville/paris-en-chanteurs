@@ -105,8 +105,8 @@ section[id] {
 header {
   position: sticky;
   top: 0;
-  background-color: var(--color-primary); /* Fond vert #009f70 */
-  border-bottom: 1px solid var(--color-primary-dark);
+  background-color: var(--color-secondary); /* Fond crème #feecda */
+  border-bottom: 1px solid rgba(0, 159, 112, 0.15);
   z-index: 100;
   transition: var(--transition-smooth);
 }
@@ -114,36 +114,36 @@ header {
 header.scrolled {
   padding: 12px 0;
   box-shadow: var(--shadow-sm);
-  background-color: #00825c; /* Vert plus foncé */
+  background-color: var(--color-secondary);
 }
 
 /* Logo updates for green header */
 header .logo-circle {
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 header .logo-text {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 header .logo:hover .logo-text {
-  color: var(--color-secondary);
+  color: var(--color-primary-dark);
 }
 
 /* Nav links updates for green header */
 header .nav-links a {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 header .nav-links a:hover,
 header .nav-links a.active {
-  color: var(--color-white);
+  color: var(--color-primary-dark);
 }
 header .nav-links a::after {
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
 }
 
 /* Burger menu updates for green header */
 header .burger-menu span {
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
 }
 
 .nav-container {
@@ -294,8 +294,8 @@ header .burger-menu span {
   position: relative;
   overflow: hidden;
   padding: 80px 0;
-  background-color: var(--color-primary); /* Fond vert #009f70 */
-  border-bottom: 1px solid var(--color-primary-dark);
+  background-color: var(--color-secondary); /* Fond crème #feecda */
+  border-bottom: 1px solid rgba(0, 159, 112, 0.15);
 }
 
 .hero-grid {
@@ -324,7 +324,7 @@ header .burger-menu span {
   text-transform: uppercase;
   font-size: 4rem;
   margin-bottom: 20px;
-  color: var(--color-white);
+  color: var(--color-primary);
   line-height: 1.1;
 }
 
@@ -333,7 +333,7 @@ header .burger-menu span {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--color-secondary); /* Blanc crème pour le sous-titre */
+  color: var(--color-primary-dark);
   text-transform: none; /* Pas en Raghero/majuscules */
   font-size: 2.2rem;
   margin-top: 10px;
@@ -342,7 +342,7 @@ header .burger-menu span {
 .hero-tagline {
   font-size: 1.3rem;
   margin-bottom: 30px;
-  color: var(--color-secondary); /* Blanc crème pour le pitch */
+  color: var(--color-primary);
   font-family: var(--font-serif);
   border-left: 3px solid var(--color-accent);
   padding-left: 20px;
@@ -356,25 +356,25 @@ header .burger-menu span {
 }
 
 .hero-actions .btn-primary {
-  background-color: var(--color-white);
-  color: var(--color-primary-dark);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 159, 112, 0.15);
 }
 
 .hero-actions .btn-primary:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary-dark);
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 159, 112, 0.25);
 }
 
 .hero-actions .btn-secondary {
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .hero-actions .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 159, 112, 0.08);
   transform: translateY(-2px);
 }
 
@@ -392,7 +392,7 @@ header .burger-menu span {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .hero-meta-label {
@@ -412,8 +412,10 @@ header .burger-menu span {
 
 .book-shadow-behind {
   position: absolute;
-  width: 290px;
-  height: 440px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
   border-radius: 4px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25); /* Grey, diffuse shadow */
@@ -424,8 +426,10 @@ header .burger-menu span {
 }
 
 .book-cover {
+  display: block;
   width: 290px;
-  height: 440px;
+  height: auto;
+  aspect-ratio: 1000 / 1438;
   border-radius: 4px;
   position: relative;
   z-index: 2;
@@ -1187,7 +1191,7 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-secondary);
     border-bottom: 1px solid var(--color-primary);
     flex-direction: column;
     padding: 30px 24px;
@@ -1232,7 +1236,7 @@ footer {
   }
   .book-cover {
     width: 250px;
-    height: 380px;
+    height: auto;
   }
   .book-cover-illustration img {
     max-height: 100px;

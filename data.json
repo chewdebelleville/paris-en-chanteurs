@@ -1,7 +1,7 @@
 {
   "playlists": {
-    "chanson-realiste": {
-      "id": "chanson-realiste",
+    "chanson-realiste-montmartre": {
+      "id": "chanson-realiste-montmartre",
       "number": 1,
       "title": "Montmartre et la chanson réaliste",
       "subtitle": "La Môme de la Rue Saint-Vincent",
@@ -14,8 +14,8 @@
       "deezer": "https://link.deezer.com/s/33R9sec6uJmKzsj6upvMi",
       "youtube": "https://music.youtube.com/playlist?list=PLYI5cdIGnKAg&si=oUuqk3aeuw7E2rkb"
     },
-    "brassens": {
-      "id": "brassens",
+    "georges-brassens": {
+      "id": "georges-brassens",
       "number": 2,
       "title": "Georges Brassens",
       "subtitle": "La Muse de l'Existentialisme",
@@ -28,8 +28,8 @@
       "deezer": "https://link.deezer.com/s/33Rf2wykmErIufE0Vhk0G",
       "youtube": "https://music.youtube.com/playlist?list=PLNYlvhV26YM0&si=QmU8JJCLxP-7fvO6"
     },
-    "vian": {
-      "id": "vian",
+    "boris-vian": {
+      "id": "boris-vian",
       "number": 3,
       "title": "Boris Vian",
       "subtitle": "De Maurice Chevalier à Piaf",
@@ -42,8 +42,8 @@
       "deezer": "https://link.deezer.com/s/33Rf5yIaaDGfGKCT0o6PO",
       "youtube": "https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2"
     },
-    "rive-gauche": {
-      "id": "rive-gauche",
+    "cabarets-rive-gauche": {
+      "id": "cabarets-rive-gauche",
       "number": 4,
       "title": "Cabarets Rive gauche",
       "subtitle": "La Dame en Noir des Cabarets",
@@ -56,8 +56,8 @@
       "deezer": "https://www.deezer.com/fr/playlist/123456789",
       "youtube": "https://music.youtube.com/playlist?list=PLInGoYMn0If4&si=ChKJugww0T2NiY16"
     },
-    "aznavour": {
-      "id": "aznavour",
+    "charles-aznavour": {
+      "id": "charles-aznavour",
       "number": 5,
       "title": "Charles Aznavour",
       "subtitle": "L'esprit frondeur des bancs publics",
@@ -70,8 +70,8 @@
       "deezer": "https://link.deezer.com/s/33Rf8cIHu1dTr4bRGuOwJ",
       "youtube": "https://music.youtube.com/playlist?list=PLX0aIzTGc64Q&si=2rK2A_5Kz7YxpXR9"
     },
-    "gainsbourg": {
-      "id": "gainsbourg",
+    "serge-gainsbourg": {
+      "id": "serge-gainsbourg",
       "number": 6,
       "title": "Serge Gainsbourg",
       "subtitle": "Flânerie parisienne et music-hall",
@@ -98,8 +98,8 @@
       "deezer": "https://link.deezer.com/s/33Rfd1k1HsSBxDsJaKcOI",
       "youtube": "https://music.youtube.com/playlist?list=PLBX5H2k0ltCc&si=Ufk2g8g2jLk4HaJz"
     },
-    "hardy-dutronc": {
-      "id": "hardy-dutronc",
+    "francoise-hardy-jacques-dutronc": {
+      "id": "francoise-hardy-jacques-dutronc",
       "number": 8,
       "title": "Françoise Hardy et Jacques Dutronc",
       "subtitle": "La bohème au fil de la Seine",
@@ -126,8 +126,8 @@
       "deezer": "https://link.deezer.com/s/33Rfhr1QPsO1U2rMRIbL5",
       "youtube": "https://music.youtube.com/playlist?list=PLdr6rtuneYU8&si=7IlP4mKu7cGuk8PQ"
     },
-    "cim-montmartre": {
-      "id": "cim-montmartre",
+    "cimetiere-montmartre": {
+      "id": "cimetiere-montmartre",
       "number": 10,
       "title": "Cimetière Montmartre",
       "subtitle": "Les poètes de la Rive Gauche",
@@ -140,8 +140,8 @@
       "deezer": "https://link.deezer.com/s/33Rfk33F0Dr1oJMnrOgXW",
       "youtube": "https://music.youtube.com/playlist?list=PLO_sOubE8h9k&si=mTOIXTM7Orep7pCA"
     },
-    "montparnasse": {
-      "id": "montparnasse",
+    "cimetiere-montparnasse": {
+      "id": "cimetiere-montparnasse",
       "number": 11,
       "title": "Cimetière Montparnasse",
       "subtitle": "Dans la rue et les faubourgs",
@@ -154,8 +154,8 @@
       "deezer": "https://link.deezer.com/s/33Rfm2z1bTp0nIcgOOtvg",
       "youtube": "https://music.youtube.com/playlist?list=PLCrlyJ67TzQE&si=7ZEaSIr6NhKyjD2u"
     },
-    "perelachaise": {
-      "id": "perelachaise",
+    "cimetiere-pere-lachaise": {
+      "id": "cimetiere-pere-lachaise",
       "number": 12,
       "title": "Cimetière du Père-Lachaise",
       "subtitle": "Les mélodies mélancoliques de la Seine",

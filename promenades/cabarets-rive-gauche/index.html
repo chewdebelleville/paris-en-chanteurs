@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balade 2 : Georges Brassens — Paris en chanteurs</title>
-    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Georges Brassens de Paris en chanteurs.">
+    <title>Balade 4 : Cabarets Rive gauche — Paris en chanteurs</title>
+    <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade Cabarets Rive gauche de Paris en chanteurs.">
     
     <!-- Mobile-first high performance inline CSS -->
     <style>
@@ -26,7 +26,7 @@
 
         @font-face {
             font-family: 'Raghero';
-            src: url('../sources/Raghero-regular.otf') format('opentype'),
+            src: url('../../sources/Raghero-regular.otf') format('opentype'),
                  url('/sources/Raghero-regular.otf') format('opentype');
             font-style: normal;
             font-weight: normal;
@@ -203,18 +203,18 @@
         </div>
 
         <div style="text-align: center;">
-            <h1 class="title" id="walkTitle">Georges Brassens</h1>
-            <p class="subtitle" id="walkSubtitle">La Muse de l'Existentialisme</p>
+            <h1 class="title" id="walkTitle">Cabarets Rive gauche</h1>
+            <p class="subtitle" id="walkSubtitle">La Dame en Noir des Cabarets</p>
         </div>
 
         <div class="meta">
             <div class="meta-item">
                 <span>⏱</span>
-                <span id="walkDuration">2h00</span>
+                <span id="walkDuration">1h50</span>
             </div>
             <div class="meta-item">
                 <span>📍</span>
-                <span id="walkDistance">3.2 km</span>
+                <span id="walkDistance">3.0 km</span>
             </div>
         </div>
 
@@ -229,7 +229,7 @@
                 <img src="/sources/spotify-logo.svg" alt="Spotify Logo">
             </a>
             
-            <a href="https://music.youtube.com/playlist?list=PL4fGSI1pDJn5k7_c29f6G4w5O5j4p_aB2" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
+            <a href="https://music.youtube.com/playlist?list=PLInGoYMn0If4&si=ChKJugww0T2NiY16" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
                 <span>Écouter sur YouTube Music</span>
                 <img src="/sources/youtube-music-logo.svg" alt="YouTube Music Logo">
             </a>
@@ -237,15 +237,15 @@
     </div>
 
     <div class="footer">
-        <a href="../index.html" class="footer-link">Visiter le site complet</a>
+        <a href="../../index.html" class="footer-link">Visiter le site complet</a>
     </div>
 
     <!-- Client-side script to fetch latest updates from data.json -->
     <script>
-        const WALK_KEY = "brassens";
+        const WALK_KEY = "cabarets-rive-gauche";
         
         // Fetch data.json to keep playlists dynamically synchronized
-        fetch('../data.json')
+        fetch('../../data.json')
             .then(res => {
                 if (!res.ok) throw new Error("JSON fetch failed");
                 return res.json();

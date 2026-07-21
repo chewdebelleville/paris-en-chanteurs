@@ -6,14 +6,14 @@
  *   node generate_sitemap.js [BASE_URL]
  * 
  * Exemple:
- *   node generate_sitemap.js https://parisenchanteurs.fr
+ *   node generate_sitemap.js https://www.paris-en-chanteurs.fr
  */
 
 const fs = require('fs');
 const path = require('path');
 
 // Configuration du domaine de base (modifiable via argument CLI ou variable d'environnement SITE_URL)
-const DEFAULT_BASE_URL = 'https://parisenchanteurs.fr';
+const DEFAULT_BASE_URL = 'https://www.paris-en-chanteurs.fr';
 const BASE_URL = (process.argv[2] || process.env.SITE_URL || DEFAULT_BASE_URL).replace(/\/+$/, '');
 
 // Fichiers/dossiers à exclure spécifiquement du sitemap
@@ -69,23 +69,27 @@ function generateSitemap() {
     console.log(`🚀 Génération du sitemap avec la URL de base : ${BASE_URL}\n`);
 
     const urls = [];
+    const addedUrls = new Set();
 
     // 1. Page d'accueil
     const rootIndexPath = path.join(__dirname, 'index.html');
     if (fs.existsSync(rootIndexPath)) {
+        const homeUrl = `${BASE_URL}/`;
         urls.push({
-            loc: `${BASE_URL}/`,
+            loc: homeUrl,
             lastmod: getFileLastMod(rootIndexPath),
             changefreq: 'weekly',
             priority: '1.0'
         });
+        addedUrls.add(homeUrl);
     }
 
-    // 2. Découverte dynamique des pages de balades
-    // A. Lecture de data.json si disponible
-    const dataPath = path.join(__dirname, 'data.json');
+    // 2. Découverte des balades sous /promenades/
+    const promenadesDir = path.join(__dirname, 'promenades');
     const walkKeysFromData = new Set();
 
+    // A. Lecture depuis data.json
+    const dataPath = path.join(__dirname, 'data.json');
     if (fs.existsSync(dataPath)) {
         try {
             const rawData = fs.readFileSync(dataPath, 'utf8');
@@ -100,38 +104,42 @@ function generateSitemap() {
         }
     }
 
-    // B. Parcours du répertoire pour détecter tous les dossiers contenant index.html
-    const items = fs.readdirSync(__dirname, { withFileTypes: true });
+    // B. Découverte des sous-dossiers dans /promenades/
+    if (fs.existsSync(promenadesDir)) {
+        const items = fs.readdirSync(promenadesDir, { withFileTypes: true });
 
-    items.forEach(item => {
-        // Exclure les fichiers / dossiers de la liste d'exclusion
-        if (EXCLUDED_PATTERNS.some(pattern => item.name.includes(pattern))) {
-            return;
-        }
-
-        if (item.isDirectory()) {
-            const subIndexPath = path.join(__dirname, item.name, 'index.html');
-            if (fs.existsSync(subIndexPath)) {
-                urls.push({
-                    loc: `${BASE_URL}/${item.name}/`,
-                    lastmod: getFileLastMod(subIndexPath),
-                    changefreq: 'monthly',
-                    priority: '0.8'
-                });
+        items.forEach(item => {
+            if (item.isDirectory() && !EXCLUDED_PATTERNS.some(p => item.name.includes(p))) {
+                const subIndexPath = path.join(promenadesDir, item.name, 'index.html');
+                const walkUrl = `${BASE_URL}/promenades/${item.name}`;
+                
+                if (!addedUrls.has(walkUrl)) {
+                    urls.push({
+                        loc: walkUrl,
+                        lastmod: fs.existsSync(subIndexPath) ? getFileLastMod(subIndexPath) : formatDate(new Date()),
+                        changefreq: 'monthly',
+                        priority: '0.8'
+                    });
+                    addedUrls.add(walkUrl);
+                }
                 walkKeysFromData.delete(item.name);
             }
-        }
-    });
-
-    // C. Si des clés de data.json existent mais le dossier n'a pas encore été analysé (ex: si créé dynamiquement)
-    walkKeysFromData.forEach(key => {
-        const subIndexPath = path.join(__dirname, key, 'index.html');
-        urls.push({
-            loc: `${BASE_URL}/${key}/`,
-            lastmod: fs.existsSync(subIndexPath) ? getFileLastMod(subIndexPath) : formatDate(new Date()),
-            changefreq: 'monthly',
-            priority: '0.8'
         });
+    }
+
+    // C. Ajout des clés restantes de data.json si non trouvées sur le disque
+    walkKeysFromData.forEach(slug => {
+        const walkUrl = `${BASE_URL}/promenades/${slug}`;
+        if (!addedUrls.has(walkUrl)) {
+            const subIndexPath = path.join(promenadesDir, slug, 'index.html');
+            urls.push({
+                loc: walkUrl,
+                lastmod: fs.existsSync(subIndexPath) ? getFileLastMod(subIndexPath) : formatDate(new Date()),
+                changefreq: 'monthly',
+                priority: '0.8'
+            });
+            addedUrls.add(walkUrl);
+        }
     });
 
     // 3. Construction du contenu XML

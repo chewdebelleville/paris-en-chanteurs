@@ -1,86 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://parisenchanteurs.fr/</loc>
+    <loc>https://www.paris-en-chanteurs.fr/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/aznavour/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/barbara</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/barbara/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/boris-vian</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/brassens/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/cabarets-rive-gauche</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/chanson-realiste/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/chanson-realiste-montmartre</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/cimetiere-montmartre/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/charles-aznavour</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/gainsbourg/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/cimetiere-montmartre</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/hardy-dutronc/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/cimetiere-montparnasse</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/montparnasse/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/cimetiere-pere-lachaise</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/perelachaise/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/francoise-hardy-jacques-dutronc</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/renaud/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/georges-brassens</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/rive-gauche/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/renaud</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parisenchanteurs.fr/vian/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://parisenchanteurs.fr/cim-montmartre/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <loc>https://www.paris-en-chanteurs.fr/promenades/serge-gainsbourg</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
