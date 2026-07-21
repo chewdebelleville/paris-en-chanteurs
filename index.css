@@ -409,21 +409,6 @@ header .burger-menu span {
   margin: 0 auto;
 }
 
-.book-shadow-behind {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 4px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25); /* Grey, diffuse shadow */
-  transform: translate(5px, 10px);
-  z-index: 1;
-  pointer-events: none;
-  transition: var(--transition-smooth);
-}
-
 .book-cover {
   display: block;
   width: 400px;
@@ -434,13 +419,11 @@ header .burger-menu span {
   position: relative;
   z-index: 2;
   transition: var(--transition-smooth);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  transform: translate(5px, 10px);
 }
 
 .book-cover:hover {
-  transform: translateY(-8px) rotate(-1deg);
-}
-
-.book-mockup-container:hover .book-shadow-behind {
   transform: translateY(-8px) rotate(-1deg) translate(5px, 10px);
 }
 
