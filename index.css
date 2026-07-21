@@ -404,10 +404,9 @@ header .burger-menu span {
 
 /* Book Cover Mockup */
 .book-mockup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .book-shadow-behind {
@@ -427,7 +426,8 @@ header .burger-menu span {
 
 .book-cover {
   display: block;
-  width: 290px;
+  width: 400px;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 1000 / 1438;
   border-radius: 4px;
@@ -1235,7 +1235,8 @@ footer {
     gap: 16px;
   }
   .book-cover {
-    width: 250px;
+    width: 280px;
+    max-width: 85vw;
     height: auto;
   }
   .book-cover-illustration img {
