@@ -397,7 +397,7 @@ header .burger-menu span {
 
 .hero-meta-label {
   font-size: 0.85rem;
-  color: var(--color-secondary-dark);
+  color: var(--color-primary-dark);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
