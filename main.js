@@ -132,9 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Image sources for streaming platforms
     const icons = {
-        deezer: `<img src="sources/deezer-logo.svg" alt="Deezer" style="width: 24px; height: 24px;">`,
-        spotify: `<img src="sources/spotify-logo.svg" alt="Spotify" style="width: 24px; height: 24px;">`,
-        youtube: `<img src="sources/youtube-music-logo.svg" alt="YouTube Music" style="width: 24px; height: 24px;">`
+        deezer: `<img src="sources/img/deezer-logo.svg" alt="Deezer" style="width: 24px; height: 24px;">`,
+        spotify: `<img src="sources/img/spotify-logo.svg" alt="Spotify" style="width: 24px; height: 24px;">`,
+        youtube: `<img src="sources/img/youtube-music-logo.svg" alt="YouTube Music" style="width: 24px; height: 24px;">`
     };
 
     // Render walks in grid

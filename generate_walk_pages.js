@@ -239,17 +239,17 @@ function generateWalkHtml(key, walk) {
         <div class="playlist-buttons">
             <a href="${walk.deezer}" target="_blank" rel="noopener" class="playlist-btn btn-deezer" id="linkDeezer">
                 <span>Écouter sur Deezer</span>
-                <img src="/sources/deezer-logo.svg" alt="Deezer Logo">
+                <img src="/sources/img/deezer-logo.svg" alt="Deezer Logo">
             </a>
             
             <a href="${walk.spotify}" target="_blank" rel="noopener" class="playlist-btn btn-spotify" id="linkSpotify">
                 <span>Écouter sur Spotify</span>
-                <img src="/sources/spotify-logo.svg" alt="Spotify Logo">
+                <img src="/sources/img/spotify-logo.svg" alt="Spotify Logo">
             </a>
             
             <a href="${walk.youtube}" target="_blank" rel="noopener" class="playlist-btn btn-youtube" id="linkYoutube">
                 <span>Écouter sur YouTube Music</span>
-                <img src="/sources/youtube-music-logo.svg" alt="YouTube Music Logo">
+                <img src="/sources/img/youtube-music-logo.svg" alt="YouTube Music Logo">
             </a>
         </div>
     </div>
