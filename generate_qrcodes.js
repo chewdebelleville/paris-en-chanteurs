@@ -7,8 +7,14 @@ async function main() {
   const sitemapPath = path.join(__dirname, 'sitemap.xml');
   const outputDir = path.join(__dirname, 'QR');
 
-  // 1. Crée le répertoire de sortie s'il n'existe pas
-  if (!fs.existsSync(outputDir)) {
+  // 1. Crée le répertoire de sortie s'il n'existe pas, ou le vide s'il existe
+  if (fs.existsSync(outputDir)) {
+    const files = fs.readdirSync(outputDir);
+    for (const file of files) {
+      fs.unlinkSync(path.join(outputDir, file));
+    }
+    console.log("Anciens fichiers de QR codes supprimés.");
+  } else {
     fs.mkdirSync(outputDir, { recursive: true });
     console.log(`Répertoire de sortie créé : ${outputDir}`);
   }
@@ -52,7 +58,7 @@ async function main() {
     // 4. Génération du format vectoriel SVG
     const svgOptions = {
       type: 'svg',
-      errorCorrectionLevel: 'H', // Correction d'erreur maximale
+      errorCorrectionLevel: 'L', // Correction d'erreur minimale (Low) pour un rendu épuré/minimaliste
       margin: 4, // Zone tranquille standard (quiet zone)
       color: {
         dark: '#000000',
@@ -69,7 +75,7 @@ async function main() {
 
     // 5. Génération du format vectoriel PDF haute résolution
     try {
-      const qrCode = QRCode.create(url, { errorCorrectionLevel: 'H' });
+      const qrCode = QRCode.create(url, { errorCorrectionLevel: 'L' });
       const size = qrCode.modules.size;
       const data = qrCode.modules.data;
 
