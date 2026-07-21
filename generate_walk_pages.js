@@ -23,6 +23,7 @@ function generateWalkHtml(key, walk) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balade ${walk.number} : ${walk.title} — Paris en chanteurs</title>
     <meta name="description" content="Accédez instantanément à la playlist musicale pour la balade ${walk.title} de Paris en chanteurs.">
+    <link rel="icon" type="image/png" href="../../sources/img/favicon.png">
     
     <!-- Mobile-first high performance inline CSS -->
     <style>
@@ -44,8 +45,8 @@ function generateWalkHtml(key, walk) {
 
         @font-face {
             font-family: 'Raghero';
-            src: url('../../sources/Raghero-regular.otf') format('opentype'),
-                 url('/sources/Raghero-regular.otf') format('opentype');
+            src: url('../../sources/fonts/Raghero-regular.otf') format('opentype'),
+                 url('/sources/fonts/Raghero-regular.otf') format('opentype');
             font-style: normal;
             font-weight: normal;
         }
